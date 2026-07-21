@@ -80,7 +80,6 @@ export default function ServicesPage() {
                       : 'bg-white/[0.03] border-white/10 hover:border-white/20'
                   }`}
                 >
-                  <div className={`w-1.5 h-1.5  ${s.color} mb-5`} />
                   <h3 className="text-white font-semibold text-base mb-2">{s.name}</h3>
                   <p className="text-zinc-500 text-sm leading-relaxed mb-4">{s.desc}</p>
                   <span className="text-zinc-500 group-hover:text-white text-xs transition-colors">

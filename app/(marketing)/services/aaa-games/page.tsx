@@ -8,7 +8,6 @@ export default function AaaGamesPage() {
       tagline="Full production services for large-scale open-world titles."
       description="We partner with studios and publishers to deliver open-world titles at AAA scale — from world systems to live-service infrastructure."
       accentText="text-zinc-400"
-      accentBg="bg-white"
       stats={[
         { value: '100km²', label: 'Largest World Built' },
         { value: '40+', label: 'Engineers Available' },

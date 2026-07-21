@@ -8,7 +8,6 @@ export default function MonitoringPage() {
       tagline="Know about problems before your customers do."
       description="Neuro AI-powered monitoring that watches infrastructure, applications, and business metrics in real time, and tells you what actually matters."
       accentText="text-zinc-400"
-      accentBg="bg-white"
       stats={[
         { value: '<1min', label: 'Alert Latency' },
         { value: '99.99%', label: 'Detection Accuracy' },

@@ -8,7 +8,6 @@ export default function GameEnginePage() {
       tagline="Custom engine development and graphics pipeline engineering."
       description="We build and extend real-time engines — the same discipline behind Gamingar's Adaptive Input Resolution and rendering pipeline."
       accentText="text-zinc-400"
-      accentBg="bg-white"
       stats={[
         { value: '4000Hz', label: 'Input Sampling' },
         { value: '60fps', label: 'Render Target' },

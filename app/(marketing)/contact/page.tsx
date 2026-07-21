@@ -33,8 +33,8 @@ function Reveal({
 const contactItems = [
   {
     label: 'Email',
-    value: 'hello@switchiify.com',
-    href: 'mailto:hello@switchiify.com',
+    value: 'info@switchiify.com',
+    href: 'mailto:info@switchiify.com',
     icon: (
       <svg
         className="w-4 h-4 text-zinc-400"
@@ -52,8 +52,8 @@ const contactItems = [
   },
   {
     label: 'Phone',
-    value: '+1 555 123-4567',
-    href: 'tel:+15551234567',
+    value: '+250 782 097 108',
+    href: 'tel:+250782097108',
     icon: (
       <svg
         className="w-4 h-4 text-zinc-400"

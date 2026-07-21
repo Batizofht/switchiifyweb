@@ -79,6 +79,22 @@ export const metadata: Metadata = {
   manifest: "/manifest.webmanifest",
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": ["Organization", "WebSite"],
+  name: "Switchiify",
+  url: "https://www.switchiify.com",
+  logo: "https://www.switchiify.com/icon.png",
+  description:
+    "Switchiify Platforms Inc. is a technology corporation that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+  sameAs: ["https://stockify.rw"],
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.switchiify.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,6 +105,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         <ThemeProvider>
           <NavBar />
           <main className="min-h-screen bg-black dark:bg-black">

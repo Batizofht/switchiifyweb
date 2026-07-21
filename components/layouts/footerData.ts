@@ -65,7 +65,7 @@ export const footerData = [
       { label: 'Help Center', href: '/help' },
       { label: 'Security', href: '/security' },
       { label: 'Troubleshooting', href: '/help' },
-      { label: 'Account Support', href: '/myaccount' },
+      { label: 'Account Support', href: '/signin' },
       { label: 'Product Guides', href: '/help' },
       { label: 'Legal', href: '/legal' },
       { label: 'Terms & Conditions', href: '/terms' },

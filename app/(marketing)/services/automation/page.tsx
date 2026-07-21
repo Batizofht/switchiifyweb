@@ -8,7 +8,6 @@ export default function AutomationPage() {
       tagline="Automate the work that shouldn't need a human."
       description="We design and deploy automation pipelines that connect your existing tools, remove repetitive manual work, and scale with your operations — without a rebuild."
       accentText="text-zinc-400"
-      accentBg="bg-white"
       stats={[
         { value: '40%', label: 'Avg. Time Saved' },
         { value: '120+', label: 'Workflows Automated' },

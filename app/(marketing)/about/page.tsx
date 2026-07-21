@@ -267,7 +267,6 @@ A global technology company, headquartered in Kigali.
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.1}>
                 <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors duration-300 h-full">
-                  <div className="w-1.5 h-1.5 bg-white mb-5" />
                   <h3 className="text-white font-semibold text-base mb-3">{v.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{v.body}</p>
                 </article>

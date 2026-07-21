@@ -245,7 +245,7 @@ export function NavBar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 max-h-[calc(100dvh-3.5rem)] overflow-y-auto"
+            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 h-[calc(100dvh-3.5rem)] overflow-y-auto"
           >
             <div className="px-6 py-6">
               <AnimatePresence mode="wait" initial={false}>

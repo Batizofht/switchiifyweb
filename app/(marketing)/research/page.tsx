@@ -73,7 +73,6 @@ export default function ResearchIndexPage() {
                 href={d.href}
                 className="group block p-8 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors h-full"
               >
-                <div className={`w-1.5 h-1.5 ${d.color} mb-6`} />
                 <h3 className="text-white font-semibold text-xl mb-3">{d.name}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed mb-4">{d.desc}</p>
                 <span className="text-zinc-500 group-hover:text-white text-xs transition-colors">

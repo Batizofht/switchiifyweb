@@ -237,7 +237,6 @@ export default function CommunityPage() {
             {whatWeDoItems.map((item, i) => (
               <Reveal key={item.heading} delay={i * 0.08}>
                 <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors duration-300 h-full">
-                  <div className="w-1.5 h-1.5 bg-white mb-5" aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-3">{item.heading}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{item.body}</p>
                 </article>
@@ -267,7 +266,6 @@ export default function CommunityPage() {
                   <Reveal key={item.role} delay={0.15 + i * 0.07}>
                     <div className="py-5">
                       <div className="flex items-start gap-4">
-                        <span className="w-1.5 h-1.5 bg-white mt-2 shrink-0" aria-hidden="true" />
                         <div>
                           <p className="text-white font-semibold text-sm mb-1">{item.role}</p>
                           <p className="text-zinc-500 text-sm leading-relaxed">{item.description}</p>
@@ -406,7 +404,6 @@ export default function CommunityPage() {
             {getItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
                 <article className={`p-6 rounded-md bg-white/[0.03] border ${item.accent} transition-colors duration-300 h-full`}>
-                  <div className={`w-2 h-2 rounded-full ${item.dot} mb-6`} aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-4">{item.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{item.body}</p>
                 </article>
