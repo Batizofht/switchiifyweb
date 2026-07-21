@@ -32,7 +32,7 @@ export function HeroSection() {
   };
 
   return (
-    <section className="h-screen w-full relative flex flex-col overflow-hidden">
+    <section className="min-h-screen w-full relative flex flex-col overflow-hidden">
       {/* Video Background */}
       <video
         ref={videoRef}
@@ -63,7 +63,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight max-w-3xl mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.05] tracking-tight max-w-3xl mb-6"
         >
           Build, Change &<br />Grow Through<br />Our Technology.
         </motion.h1>
@@ -111,7 +111,7 @@ export function HeroSection() {
       </div>
 
       {/* Play/Pause + video dots */}
-      <div className="absolute bottom-24 right-8 z-20 flex flex-col items-center gap-3">
+      <div className="hidden md:flex absolute bottom-24 right-8 z-20 flex-col items-center gap-3">
         <button
           onClick={togglePlayPause}
           aria-label={isPlaying ? 'Pause' : 'Play'}
@@ -132,10 +132,15 @@ export function HeroSection() {
             <button
               key={i}
               onClick={() => setActiveVideo(i)}
-              className={`rounded-full transition-all duration-300 ${
-                i === activeVideo ? 'bg-white w-4 h-1.5' : 'bg-zinc-600 hover:bg-zinc-400 w-1.5 h-1.5'
-              }`}
-            />
+              aria-label={`Show video ${i + 1}`}
+              className="w-4 h-3 flex items-center justify-center"
+            >
+              <span
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === activeVideo ? 'bg-white w-4' : 'bg-zinc-600 hover:bg-zinc-400 w-1.5'
+                }`}
+              />
+            </button>
           ))}
         </div>
       </div>
@@ -145,7 +150,7 @@ export function HeroSection() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1.5"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex-col items-center gap-1.5"
       >
         <motion.div
           animate={{ y: [0, 5, 0] }}

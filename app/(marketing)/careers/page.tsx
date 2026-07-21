@@ -47,7 +47,7 @@ export default function CareersPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             Build the future with us.
           </motion.h1>
@@ -66,7 +66,7 @@ export default function CareersPage() {
       <section className="py-24 border-t border-zinc-900">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {values.map((v) => (
-            <div key={v.title} className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800">
+            <div key={v.title} className="p-6 rounded-md bg-white/[0.03] border border-white/10">
               <h3 className="text-white font-semibold text-base mb-2">{v.title}</h3>
               <p className="text-zinc-500 text-sm leading-relaxed">{v.desc}</p>
             </div>

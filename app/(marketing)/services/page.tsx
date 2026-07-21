@@ -5,15 +5,15 @@ import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
 const services = [
-  { name: 'Business Automation', desc: 'Automate complex workflows across enterprise environments.', href: '/services/automation', color: 'bg-blue-400' },
-  { name: 'Smart Monitoring', desc: 'Real-time infrastructure monitoring powered by Neuro AI.', href: '/services/monitoring', color: 'bg-cyan-400' },
-  { name: 'Emergency Response AI', desc: 'AI systems built for mission-critical emergency scenarios.', href: '/services/emergency', color: 'bg-red-400' },
-  { name: 'AI Device Integration', desc: 'Connect any device to the Switchiify AI ecosystem.', href: '/services/ai-integration', color: 'bg-violet-400' },
-  { name: 'Game Development', desc: 'End-to-end game development powered by the Gamingar engine.', href: '/services/game-dev', color: 'bg-green-400', highlight: true },
-  { name: 'AAA Open-World Games', desc: 'Full production services for large-scale open-world titles.', href: '/services/aaa-games', color: 'bg-green-400' },
-  { name: '3D World Design', desc: 'Custom 3D world creation from concept to final asset.', href: '/services/3d-design', color: 'bg-purple-400' },
-  { name: 'Motion & Animation', desc: 'Cinematic animation, simulation, and motion graphics.', href: '/services/animation', color: 'bg-pink-400' },
-  { name: 'Game Engine Systems', desc: 'Custom engine development and graphics pipeline engineering.', href: '/services/game-engine', color: 'bg-amber-400' },
+  { name: 'Business Automation', desc: 'Automate complex workflows across enterprise environments.', href: '/services/automation', color: 'bg-white' },
+  { name: 'Smart Monitoring', desc: 'Real-time infrastructure monitoring powered by Neuro AI.', href: '/services/monitoring', color: 'bg-white' },
+  { name: 'Emergency Response AI', desc: 'AI systems built for mission-critical emergency scenarios.', href: '/services/emergency', color: 'bg-white' },
+  { name: 'AI Device Integration', desc: 'Connect any device to the Switchiify AI ecosystem.', href: '/services/ai-integration', color: 'bg-white' },
+  { name: 'Game Development', desc: 'End-to-end game development powered by the Gamingar engine.', href: '/services/game-dev', color: 'bg-white', highlight: true },
+  { name: 'AAA Open-World Games', desc: 'Full production services for large-scale open-world titles.', href: '/services/aaa-games', color: 'bg-white' },
+  { name: '3D World Design', desc: 'Custom 3D world creation from concept to final asset.', href: '/services/3d-design', color: 'bg-white' },
+  { name: 'Motion & Animation', desc: 'Cinematic animation, simulation, and motion graphics.', href: '/services/animation', color: 'bg-white' },
+  { name: 'Game Engine Systems', desc: 'Custom engine development and graphics pipeline engineering.', href: '/services/game-engine', color: 'bg-white' },
 ];
 
 const stats = [
@@ -46,7 +46,7 @@ export default function ServicesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             What We Build<br />for the World.
           </motion.h1>
@@ -74,10 +74,10 @@ export default function ServicesPage() {
               >
                 <Link
                   href={s.href}
-                  className={`group block p-6 rounded-2xl border transition-all duration-300 ${
+                  className={`group block p-6 rounded-md border transition-all duration-300 ${
                     s.highlight
-                      ? 'bg-zinc-900 border-zinc-700 hover:border-zinc-500'
-                      : 'bg-zinc-950 border-zinc-900 hover:border-zinc-700 hover:bg-zinc-900'
+                      ? 'bg-white/[0.05] border-white/20 hover:border-white/30'
+                      : 'bg-white/[0.03] border-white/10 hover:border-white/20'
                   }`}
                 >
                   <div className={`w-1.5 h-1.5  ${s.color} mb-5`} />
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 16 }}
                   animate={statsInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
-                  className="p-6 rounded-2xl border border-zinc-800 text-center"
+                  className="p-6 rounded-md border border-white/10 text-center"
                 >
                   <p className="text-3xl font-bold text-white mb-1">{s.value}</p>
                   <p className="text-zinc-500 text-sm">{s.label}</p>

@@ -7,8 +7,8 @@ export default function ElectronicsResearchPage() {
       title="Hardware built for what's next."
       tagline="Custom silicon and circuit design for adaptive devices."
       description="Our electronics division designs the sensor arrays, control boards, and low-power systems that give Switchiify hardware its edge — from Gamingar peripherals to OpenSpace devices."
-      accentText="text-blue-400"
-      accentBg="bg-blue-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '8', label: 'Custom PCBs Shipped' },
         { value: '<5W', label: 'Typical Power Draw' },

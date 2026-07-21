@@ -14,6 +14,12 @@ const columns = [
   { label: 'Research', links: researchLinks, seeAll: '/research' },
 ];
 
+const ExternalIcon = () => (
+  <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
+
 export function MegaMenu({ isOpen }: MegaMenuProps) {
   return (
     <AnimatePresence>
@@ -35,28 +41,36 @@ export function MegaMenu({ isOpen }: MegaMenuProps) {
                   {label}
                 </span>
                 <ul className="space-y-3 mb-5">
-                  {links.map((link, i) => (
-                    <motion.li
-                      key={link.href}
-                      initial={{ opacity: 0, x: -6 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.02, duration: 0.15 }}
-                    >
-                      <Link
-                        href={link.href}
-                        className={`group flex items-center gap-2 text-sm py-0.5 transition-colors duration-150 ${
-                          (link as { highlight?: boolean }).highlight
-                            ? 'text-zinc-900 dark:text-white font-medium'
-                            : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
-                        }`}
+                  {links.map((link, i) => {
+                    const isExternal = (link as { external?: boolean }).external;
+                    const isHighlight = (link as { highlight?: boolean }).highlight;
+                    const linkClassName = `group flex items-center gap-2 text-sm py-0.5 transition-colors duration-150 ${
+                      isHighlight
+                        ? 'text-zinc-900 dark:text-white font-medium'
+                        : 'text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white'
+                    }`;
+                    return (
+                      <motion.li
+                        key={link.href + link.label}
+                        initial={{ opacity: 0, x: -6 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: i * 0.02, duration: 0.15 }}
                       >
-                        {(link as { highlight?: boolean }).highlight && (
-                          <span className="w-1 h-1 bg-green-400 shrink-0" />
+                        {isExternal ? (
+                          <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+                            {isHighlight && <span className="w-1 h-1 bg-zinc-900 dark:bg-white shrink-0" />}
+                            {link.label}
+                            <ExternalIcon />
+                          </a>
+                        ) : (
+                          <Link href={link.href} className={linkClassName}>
+                            {isHighlight && <span className="w-1 h-1 bg-zinc-900 dark:bg-white shrink-0" />}
+                            {link.label}
+                          </Link>
                         )}
-                        {link.label}
-                      </Link>
-                    </motion.li>
-                  ))}
+                      </motion.li>
+                    );
+                  })}
                 </ul>
                 <Link
                   href={seeAll}

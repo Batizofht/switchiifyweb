@@ -18,7 +18,7 @@ export default function AccountDashboardPage() {
       </p>
 
       {/* Plan summary */}
-      <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="p-6 rounded-md bg-white/[0.03] border border-white/10 mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-wider text-zinc-500 mb-1.5">Current Plan</p>
           <p className="text-white font-semibold text-lg">OpenSpace Pro</p>
@@ -33,15 +33,15 @@ export default function AccountDashboardPage() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
-        <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 text-center">
+        <div className="p-6 rounded-md bg-white/[0.03] border border-white/10 text-center">
           <p className="text-3xl font-bold text-white mb-1">3</p>
           <p className="text-xs text-zinc-500 uppercase tracking-wider">Active Projects</p>
         </div>
-        <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 text-center">
+        <div className="p-6 rounded-md bg-white/[0.03] border border-white/10 text-center">
           <p className="text-3xl font-bold text-white mb-1">12</p>
           <p className="text-xs text-zinc-500 uppercase tracking-wider">Team Members</p>
         </div>
-        <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 text-center">
+        <div className="p-6 rounded-md bg-white/[0.03] border border-white/10 text-center">
           <p className="text-3xl font-bold text-white mb-1">68%</p>
           <p className="text-xs text-zinc-500 uppercase tracking-wider">Storage Used</p>
         </div>
@@ -54,7 +54,7 @@ export default function AccountDashboardPage() {
           <Link
             key={item.label}
             href={item.href}
-            className="flex items-center justify-between p-5 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors"
+            className="flex items-center justify-between p-5 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
           >
             <div>
               <p className="text-white font-medium text-sm mb-0.5">{item.label}</p>

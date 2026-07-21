@@ -53,7 +53,7 @@ export default function BlogsIndexPage() {
       <section className="relative min-h-[50vh] flex flex-col justify-center overflow-hidden">
         {/* Blue glow orb — the one gradient accent for this page */}
         <div
-          className="pointer-events-none absolute w-[700px] h-[400px] left-1/2 -translate-x-1/2 top-0 rounded-full bg-blue-600/15 blur-[150px]"
+          className="pointer-events-none absolute w-[700px] h-[400px] left-1/2 -translate-x-1/2 top-0 rounded-full bg-white/5 blur-[150px]"
           aria-hidden="true"
         />
 
@@ -71,7 +71,7 @@ export default function BlogsIndexPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.08 }}
-            className="text-5xl md:text-6xl font-bold text-white tracking-tight leading-[1.05] max-w-3xl"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-[1.05] max-w-3xl"
           >
             Inside Switchiify — Ideas, Updates & How We Build
           </motion.h1>
@@ -108,7 +108,7 @@ export default function BlogsIndexPage() {
           <Reveal>
             <Link
               href={`/blogs/${featured.slug}`}
-              className="group grid md:grid-cols-2 gap-0 rounded-2xl overflow-hidden bg-zinc-900 dark:bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors duration-300"
+              className="group grid md:grid-cols-2 gap-0 rounded-md overflow-hidden bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors duration-300"
             >
               {/* Image — diagonal clip */}
               <div className="relative h-72 md:h-auto overflow-hidden">
@@ -130,7 +130,7 @@ export default function BlogsIndexPage() {
               {/* Content */}
               <div className="flex flex-col justify-center p-8 md:p-12">
                 {/* Category chip */}
-                <span className="inline-block self-start mb-5 text-[10px] font-medium uppercase tracking-wider px-2.5 py-0.5 rounded-full text-blue-400 bg-blue-400/10">
+                <span className="inline-block self-start mb-5 text-[10px] font-medium uppercase tracking-wider px-2.5 py-0.5 rounded-full text-zinc-300 bg-white/10">
                   {featured.category}
                 </span>
 

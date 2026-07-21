@@ -79,16 +79,16 @@ export function CommunitySection() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="grid grid-cols-3 gap-px bg-zinc-800/50 rounded-2xl overflow-hidden border border-zinc-800">
+            <div className="grid grid-cols-3 gap-px bg-white/10 rounded-md overflow-hidden border border-white/10">
               {stats.map((s) => (
-                <div key={s.value} className="bg-zinc-900 px-6 py-8 text-center">
+                <div key={s.value} className="bg-black px-6 py-8 text-center">
                   <p className="text-3xl font-bold text-white mb-1">{s.value}</p>
                   <p className="text-xs text-zinc-500 uppercase tracking-wider">{s.label}</p>
                 </div>
               ))}
             </div>
 
-            <div className="mt-6 p-5 rounded-xl border border-zinc-800 bg-zinc-900/50">
+            <div className="mt-6 p-5 rounded-md border border-white/10 bg-white/[0.03]">
               <p className="text-zinc-400 text-sm leading-relaxed">
                 <span className="text-white font-medium">Switchiify welcomes everyone.</span>{' '}
                 Whether you&apos;re building your first project or shipping to millions — there&apos;s a place for you here.

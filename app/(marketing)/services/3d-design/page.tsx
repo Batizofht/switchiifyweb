@@ -7,8 +7,8 @@ export default function ThreeDDesignPage() {
       title="3D World Design"
       tagline="Custom 3D world creation from concept to final asset."
       description="Our world design team builds environments, props, and lighting systems that hold up under Gamingar's cinematic rendering pipeline."
-      accentText="text-purple-400"
-      accentBg="bg-purple-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '4K', label: 'Texture Standard' },
         { value: '200+', label: 'Environments Shipped' },

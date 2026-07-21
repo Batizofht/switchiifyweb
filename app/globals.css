@@ -27,7 +27,7 @@ body {
 
 /* Sticky scroll utility */
 .-mt-screen {
-  margin-top: -100vh;
+  margin-top: -100dvh;
 }
 
 /* Hide scrollbar while keeping scroll functionality */

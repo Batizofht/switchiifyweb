@@ -42,7 +42,7 @@ export default function PartnersPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             Grow with Switchiify.
           </motion.h1>
@@ -65,8 +65,8 @@ export default function PartnersPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={tiersInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`p-8 rounded-2xl flex flex-col border ${
-                t.highlight ? 'bg-zinc-900 border-zinc-600 ring-1 ring-zinc-600' : 'bg-zinc-950 border-zinc-800'
+              className={`p-8 rounded-md flex flex-col border ${
+                t.highlight ? 'bg-white/[0.05] border-white/20' : 'bg-white/[0.03] border-white/10'
               }`}
             >
               <h3 className="text-white font-bold text-xl mb-2">{t.name}</h3>

@@ -8,19 +8,19 @@ const divisions = [
   {
     name: 'Robotics',
     href: '/research/robotics',
-    color: 'bg-orange-400',
+    color: 'bg-white',
     desc: 'Adaptive locomotion, tactile feedback, and swarm coordination for machines that move like they understand.',
   },
   {
     name: 'Electronics',
     href: '/research/electronics',
-    color: 'bg-blue-400',
+    color: 'bg-white',
     desc: 'Custom silicon and low-power circuit design for the hardware behind every Switchiify product.',
   },
   {
     name: 'Laboratory',
     href: '/research/laboratory',
-    color: 'bg-purple-400',
+    color: 'bg-white',
     desc: 'The shared testing ground where every Switchiify prototype meets real-world conditions.',
   },
 ];
@@ -45,7 +45,7 @@ export default function ResearchIndexPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             The work behind<br />what we ship.
           </motion.h1>
@@ -71,7 +71,7 @@ export default function ResearchIndexPage() {
             >
               <Link
                 href={d.href}
-                className="group block p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors h-full"
+                className="group block p-8 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors h-full"
               >
                 <div className={`w-1.5 h-1.5 ${d.color} mb-6`} />
                 <h3 className="text-white font-semibold text-xl mb-3">{d.name}</h3>

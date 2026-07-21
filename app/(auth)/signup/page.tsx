@@ -51,10 +51,10 @@ export default function SignUpPage() {
           </div>
 
           {attempted && (
-            <div className="mb-5 p-4 rounded-sm border border-white/15 bg-white/[0.03]">
-              <p className="text-white text-sm font-medium mb-1">Accounts aren&apos;t available here yet</p>
+            <div className="mb-5 p-4 rounded-md border border-white/15 bg-white/[0.03]">
+              <p className="text-white text-sm font-medium mb-1">Account registration is managed through Stockify</p>
               <p className="text-zinc-400 text-xs leading-relaxed mb-3">
-                This demo doesn&apos;t support live registration. In the meantime, you can try{' '}
+                Continue to{' '}
                 <a
                   href="https://app.stockify.rw"
                   target="_blank"
@@ -62,8 +62,8 @@ export default function SignUpPage() {
                   className="text-white underline hover:text-zinc-300 transition-colors"
                 >
                   app.stockify.rw
-                </a>
-                .
+                </a>{' '}
+                to create your account.
               </p>
               <a
                 href="https://app.stockify.rw"

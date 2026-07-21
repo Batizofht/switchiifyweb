@@ -7,8 +7,8 @@ export default function GameDevPage() {
       title="Game Development"
       tagline="End-to-end development powered by the Gamingar engine."
       description="From prototype to launch, our studio builds games on the same engine and tooling that powers Gamingar — cinematic, adaptive, and built to scale."
-      accentText="text-green-400"
-      accentBg="bg-green-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '60fps', label: 'Target Performance' },
         { value: '3D', label: 'Native Pipeline' },

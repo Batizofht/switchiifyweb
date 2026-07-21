@@ -29,7 +29,7 @@ export function OpenSpaceSection() {
   return (
     <section className="relative">
       {/* Sticky background */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         <img
           src="/designing_images_support/9e07b2c911929de5c523877a2ee3071f017b3893.png"
           alt=""
@@ -42,11 +42,11 @@ export function OpenSpaceSection() {
       {/* Content over sticky bg */}
       <div className="-mt-screen relative z-10">
         {/* First viewport: title */}
-        <div className="h-screen flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-20">
+        <div className="h-dvh flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-20">
           <p className="text-xs uppercase tracking-[0.25em] text-white/60 mb-4 font-medium">
             Switchiify Platform
           </p>
-          <h2 className="text-7xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter">
             OpenSpace
           </h2>
           <p className="text-zinc-400 text-base mt-4 max-w-sm">
@@ -113,7 +113,7 @@ export function OpenSpaceSection() {
               className="grid grid-cols-1 md:grid-cols-3 gap-4"
             >
               {cards.map((card) => (
-                <div key={card.title} className="group relative overflow-hidden rounded-2xl h-56">
+                <div key={card.title} className="group relative overflow-hidden rounded-md h-56">
                   <img
                     src={card.img}
                     alt={card.title}

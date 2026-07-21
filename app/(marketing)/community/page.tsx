@@ -42,8 +42,8 @@ function SectionLabel({
 }) {
   return (
     <Reveal delay={delay} className="mb-10">
-      <div className="flex items-start gap-5 pl-5 border-l-2 border-violet-400/60">
-        <span className="text-violet-400 text-2xl leading-none select-none" aria-hidden="true">
+      <div className="flex items-start gap-5 pl-5 border-l-2 border-white/20">
+        <span className="text-white/40 text-2xl leading-none select-none" aria-hidden="true">
           {number}
         </span>
         <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-[1.1]">
@@ -121,20 +121,20 @@ const getItems = [
   {
     title: 'Early Access to Products',
     body: 'Community members are the first outside users of every new Switchiify platform and feature. You test before the press does.',
-    accent: 'border-violet-400/40 hover:border-violet-400/70',
-    dot: 'bg-violet-400',
+    accent: 'border-white/10 hover:border-white/20',
+    dot: 'bg-white',
   },
   {
     title: 'Exclusive Events',
     body: 'Private workshops, closed-door AMAs with our founders, and live build sessions you cannot watch anywhere else.',
-    accent: 'border-violet-400/40 hover:border-violet-400/70',
-    dot: 'bg-violet-400',
+    accent: 'border-white/10 hover:border-white/20',
+    dot: 'bg-white',
   },
   {
     title: 'Direct Team Access',
     body: 'Engineers, designers, and product leads are active in the community. Raise a problem. Get a real answer.',
-    accent: 'border-violet-400/40 hover:border-violet-400/70',
-    dot: 'bg-violet-400',
+    accent: 'border-white/10 hover:border-white/20',
+    dot: 'bg-white',
   },
 ];
 
@@ -172,7 +172,7 @@ export default function CommunityPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl mb-6"
           >
             Join the Switchiify Community
           </motion.h1>
@@ -236,8 +236,8 @@ export default function CommunityPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
             {whatWeDoItems.map((item, i) => (
               <Reveal key={item.heading} delay={i * 0.08}>
-                <article className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors duration-300 h-full">
-                  <div className="w-1.5 h-1.5 bg-violet-400 mb-5" aria-hidden="true" />
+                <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors duration-300 h-full">
+                  <div className="w-1.5 h-1.5 bg-white mb-5" aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-3">{item.heading}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{item.body}</p>
                 </article>
@@ -267,7 +267,7 @@ export default function CommunityPage() {
                   <Reveal key={item.role} delay={0.15 + i * 0.07}>
                     <div className="py-5">
                       <div className="flex items-start gap-4">
-                        <span className="w-1.5 h-1.5 bg-violet-400 mt-2 shrink-0" aria-hidden="true" />
+                        <span className="w-1.5 h-1.5 bg-white mt-2 shrink-0" aria-hidden="true" />
                         <div>
                           <p className="text-white font-semibold text-sm mb-1">{item.role}</p>
                           <p className="text-zinc-500 text-sm leading-relaxed">{item.description}</p>
@@ -281,9 +281,9 @@ export default function CommunityPage() {
 
             {/* Right: dark card with globe/network visual */}
             <Reveal delay={0.2} className="lg:sticky lg:top-32">
-              <div className="relative rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden">
+              <div className="relative rounded-md bg-white/[0.03] border border-white/10 overflow-hidden">
                 {/* Ambient violet glow — the single gradient this section gets */}
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent pointer-events-none" aria-hidden="true" />
 
                 <div className="relative p-8 md:p-10">
                   <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-6">
@@ -297,7 +297,7 @@ export default function CommunityPage() {
                       { value: '100K+', label: 'Posts on the forums' },
                       { value: '12', label: 'Events per year' },
                     ].map((stat) => (
-                      <div key={stat.label} className="p-4 rounded-xl bg-zinc-800/50 border border-zinc-700/50">
+                      <div key={stat.label} className="p-4 rounded-md bg-white/[0.03] border border-white/10">
                         <p className="text-2xl font-bold text-white mb-1">{stat.value}</p>
                         <p className="text-xs text-zinc-500 leading-snug">{stat.label}</p>
                       </div>
@@ -305,7 +305,7 @@ export default function CommunityPage() {
                   </div>
 
                   {/* Decorative network grid */}
-                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-zinc-800/30 border border-zinc-700/30">
+                  <div className="relative aspect-[4/3] rounded-md overflow-hidden bg-white/[0.03] border border-white/10">
                     <Image
                       src="/designing_images_support/8bf4e5a95ca1f8f7420629a049ac50a82730cdd9.png"
                       alt="Network visualization — global connectivity"
@@ -345,9 +345,9 @@ export default function CommunityPage() {
               <ul className="flex flex-col gap-3">
                 {whyJoinItems.map((item, i) => (
                   <Reveal key={item} delay={0.15 + i * 0.07}>
-                    <li className="flex items-start gap-4 p-5 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                    <li className="flex items-start gap-4 p-5 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
                       <svg
-                        className="w-4 h-4 text-violet-400 mt-0.5 shrink-0"
+                        className="w-4 h-4 text-zinc-400 mt-0.5 shrink-0"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -375,8 +375,8 @@ export default function CommunityPage() {
               <ul className="flex flex-col gap-3">
                 {communityActivities.map((item, i) => (
                   <Reveal key={item} delay={0.15 + i * 0.07}>
-                    <li className="flex items-start gap-4 p-5 rounded-xl bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 transition-colors">
-                      <span className="w-5 h-5 rounded-full border border-violet-400/50 text-violet-400 text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
+                    <li className="flex items-start gap-4 p-5 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
+                      <span className="w-5 h-5 rounded-full border border-white/20 text-white text-[10px] font-bold flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
                         {i + 1}
                       </span>
                       <span className="text-zinc-300 text-sm leading-relaxed">{item}</span>
@@ -405,7 +405,7 @@ export default function CommunityPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {getItems.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
-                <article className={`p-6 rounded-2xl bg-zinc-900 border ${item.accent} transition-colors duration-300 h-full`}>
+                <article className={`p-6 rounded-md bg-white/[0.03] border ${item.accent} transition-colors duration-300 h-full`}>
                   <div className={`w-2 h-2 rounded-full ${item.dot} mb-6`} aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-4">{item.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{item.body}</p>
@@ -422,7 +422,7 @@ export default function CommunityPage() {
 
           {/* Warm-toned interior room image as quiet backdrop */}
           <Reveal>
-            <div className="relative w-full max-w-4xl mx-auto aspect-[16/7] rounded-2xl overflow-hidden mb-16">
+            <div className="relative w-full max-w-4xl mx-auto aspect-[16/7] rounded-md overflow-hidden mb-16">
               <Image
                 src="/designing_images_support/d6f2f0257bd6d10a7a0f2a6b97d6b36dd117cbea.png"
                 alt="Community gathering space"

@@ -7,7 +7,7 @@ export const footerData = [
       { label: 'Openspace', href: '/openspace' },
       { label: 'Gamingar', href: '/gamingar' },
       { label: 'Neuro AI', href: '/neuroai' },
-      { label: 'Pricing', href: '/pricing' },
+      { label: 'Stockify', href: 'https://stockify.rw', external: true },
     ],
   },
   {

@@ -7,8 +7,8 @@ export default function LaboratoryResearchPage() {
       title="Where every product starts."
       tagline="A shared testing ground for Gamingar, Neuro AI, and OpenSpace."
       description="Our laboratory is where early prototypes across every Switchiify platform get tested against real conditions before anything ships — from load testing to human trials."
-      accentText="text-purple-400"
-      accentBg="bg-purple-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '4', label: 'Active Labs' },
         { value: '200+', label: 'Prototypes Tested' },

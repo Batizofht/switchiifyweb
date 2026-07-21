@@ -7,8 +7,8 @@ export default function AiIntegrationPage() {
       title="AI Device Integration"
       tagline="Connect any device to the Switchiify AI ecosystem."
       description="From sensors to enterprise hardware fleets, we build the integration layer that lets your devices talk to Neuro AI and act on what it learns."
-      accentText="text-violet-400"
-      accentBg="bg-violet-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '500+', label: 'Device Types Supported' },
         { value: '12', label: 'Protocol Standards' },

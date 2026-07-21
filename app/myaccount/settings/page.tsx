@@ -24,7 +24,7 @@ export default function SettingsPage() {
       </p>
 
       <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">Notifications</p>
-      <div className="rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden mb-10">
+      <div className="rounded-md bg-white/[0.03] border border-white/10 overflow-hidden mb-10">
         {toggles.map((t, i) => (
           <div
             key={t.key}
@@ -52,7 +52,7 @@ export default function SettingsPage() {
       </div>
 
       <p className="text-xs uppercase tracking-[0.25em] text-red-400/70 mb-4">Danger Zone</p>
-      <div className="p-6 rounded-2xl bg-red-400/5 border border-red-400/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="p-6 rounded-md bg-red-400/5 border border-red-400/20 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <p className="text-white text-sm font-medium mb-0.5">Delete Account</p>
           <p className="text-zinc-500 text-xs">Permanently remove your account and all associated data.</p>

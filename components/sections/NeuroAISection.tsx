@@ -26,7 +26,7 @@ export function NeuroAISection() {
   return (
     <section className="relative">
       {/* Sticky background */}
-      <div className="sticky top-0 h-screen w-full overflow-hidden">
+      <div className="sticky top-0 h-dvh w-full overflow-hidden">
         <img
           src="/designing_images_support/8bf4e5a95ca1f8f7420629a049ac50a82730cdd9.png"
           alt=""
@@ -39,11 +39,11 @@ export function NeuroAISection() {
       {/* Content over sticky bg */}
       <div className="-mt-screen relative z-10">
         {/* First viewport: title */}
-        <div className="h-screen flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-20">
+        <div className="h-dvh flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-20">
           <p className="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-4 font-medium">
             Switchiify Intelligence
           </p>
-          <h2 className="text-7xl md:text-8xl lg:text-9xl font-black text-white leading-none tracking-tighter">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none tracking-tighter">
             Neuro AI
           </h2>
           <p className="text-zinc-400 text-base mt-4 max-w-sm">
@@ -111,7 +111,7 @@ export function NeuroAISection() {
               {features.map((f) => (
                 <div
                   key={f.title}
-                  className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors"
+                  className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
                 >
                   <div className="w-1.5 h-1.5 bg-cyan-400 mb-5" />
                   <h3 className="text-white font-semibold text-base mb-2">{f.title}</h3>

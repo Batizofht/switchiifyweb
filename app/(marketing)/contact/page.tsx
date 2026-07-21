@@ -37,7 +37,7 @@ const contactItems = [
     href: 'mailto:hello@switchiify.com',
     icon: (
       <svg
-        className="w-4 h-4 text-blue-400"
+        className="w-4 h-4 text-zinc-400"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -56,7 +56,7 @@ const contactItems = [
     href: 'tel:+15551234567',
     icon: (
       <svg
-        className="w-4 h-4 text-blue-400"
+        className="w-4 h-4 text-zinc-400"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ const contactItems = [
     href: 'https://maps.google.com/?q=Kigali,Rwanda',
     icon: (
       <svg
-        className="w-4 h-4 text-blue-400"
+        className="w-4 h-4 text-zinc-400"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -95,7 +95,7 @@ const contactItems = [
     href: null,
     icon: (
       <svg
-        className="w-4 h-4 text-blue-400"
+        className="w-4 h-4 text-zinc-400"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -163,7 +163,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-6xl md:text-7xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl"
           >
             Get in Touch
           </motion.h1>
@@ -237,7 +237,7 @@ export default function ContactPage() {
                         {/* Dot on the line */}
                         <div
                           className={`absolute -left-6 top-2.5 w-[7px] h-[7px] rounded-full border border-zinc-700 dark:border-zinc-700 ${
-                            isLast ? 'bg-blue-400' : 'bg-zinc-900 dark:bg-zinc-900'
+                            isLast ? 'bg-white' : 'bg-zinc-900 dark:bg-zinc-900'
                           }`}
                           aria-hidden="true"
                         />
@@ -273,10 +273,10 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               {submitted ? (
-                <div className="p-8 rounded-2xl bg-zinc-900 dark:bg-zinc-900 border border-zinc-800 dark:border-zinc-800 text-center">
-                  <div className="w-10 h-10 rounded-full bg-blue-400/10 border border-blue-400/30 flex items-center justify-center mx-auto mb-5">
+                <div className="p-8 rounded-md bg-white/[0.03] border border-white/10 text-center">
+                  <div className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-5">
                     <svg
-                      className="w-5 h-5 text-blue-400"
+                      className="w-5 h-5 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -308,7 +308,7 @@ export default function ContactPage() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="p-8 rounded-2xl bg-zinc-900 dark:bg-zinc-900 border border-zinc-800 dark:border-zinc-800 space-y-5"
+                  className="p-8 rounded-md bg-white/[0.03] border border-white/10 space-y-5"
                   noValidate
                 >
                   <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-6">

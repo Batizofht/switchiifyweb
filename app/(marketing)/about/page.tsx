@@ -65,16 +65,16 @@ const products = [
   },
   {
     name: 'Neuro AI',
-    dot: 'bg-violet-400',
-    text: 'text-violet-400',
+    dot: 'bg-cyan-400',
+    text: 'text-cyan-400',
     description:
       'Human-centred artificial intelligence for people and organizations. Neuro AI learns from context, not just data — making interactions feel collaborative rather than transactional.',
     href: '/neuroai',
   },
   {
     name: 'OpenSpace',
-    dot: 'bg-sky-400',
-    text: 'text-sky-400',
+    dot: 'bg-white',
+    text: 'text-white',
     description:
       'Business infrastructure reimagined as a shared environment. OpenSpace gives teams the coordination layer they never knew was missing — from scheduling to shared intelligence.',
     href: '/openspace',
@@ -115,7 +115,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.0] max-w-3xl"
           >
             We Build the Future of Technology.
           </motion.h1>
@@ -195,7 +195,7 @@ A global technology company, headquartered in Kigali.
 
             {/* Image */}
             <Reveal delay={0.15} className="w-full">
-              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden">
+              <div className="relative w-full aspect-[4/5] rounded-md overflow-hidden">
                 <Image
                   src="/designing_images_support/d6f2f0257bd6d10a7a0f2a6b97d6b36dd117cbea.png"
                   alt="Switchiify workspace — warm interior"
@@ -203,7 +203,7 @@ A global technology company, headquartered in Kigali.
                   className="object-cover object-center"
                 />
                 {/* Subtle inner shadow to ground the image */}
-                <div className="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-2xl pointer-events-none" />
+                <div className="absolute inset-0 ring-1 ring-inset ring-white/5 rounded-md pointer-events-none" />
               </div>
             </Reveal>
           </div>
@@ -240,7 +240,7 @@ A global technology company, headquartered in Kigali.
               </Reveal>
             </div>
             <Reveal delay={0.15} className="w-full">
-              <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800 flex items-center justify-center">
+              <div className="relative w-full aspect-[4/5] rounded-md overflow-hidden bg-white/[0.03] border border-white/10 flex items-center justify-center">
                 <svg className="w-16 h-16 text-zinc-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M4 6h16v12H4V6z" />
                 </svg>
@@ -266,7 +266,7 @@ A global technology company, headquartered in Kigali.
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 0.1}>
-                <article className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors duration-300 h-full">
+                <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors duration-300 h-full">
                   <div className="w-1.5 h-1.5 bg-white mb-5" />
                   <h3 className="text-white font-semibold text-base mb-3">{v.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed">{v.body}</p>
@@ -335,7 +335,7 @@ A global technology company, headquartered in Kigali.
 
           {/* Collaborative workspace image as a quiet backdrop — cropped wide */}
           <Reveal>
-            <div className="relative w-full max-w-3xl mx-auto aspect-[16/7] rounded-2xl overflow-hidden mb-16">
+            <div className="relative w-full max-w-3xl mx-auto aspect-[16/7] rounded-md overflow-hidden mb-16">
               <Image
                 src="/designing_images_support/55efb200a4d135e0643e3adcd64d0f7ddd200650.png"
                 alt="Collaborative workspace overhead"

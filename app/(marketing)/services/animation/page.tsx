@@ -7,8 +7,8 @@ export default function AnimationPage() {
       title="Motion, Animation & Simulation"
       tagline="Cinematic animation, simulation, and motion graphics."
       description="From character motion capture to physics-driven simulation, our animation team brings Gamingar-grade motion fidelity to any production."
-      accentText="text-pink-400"
-      accentBg="bg-pink-400"
+      accentText="text-zinc-400"
+      accentBg="bg-white"
       stats={[
         { value: '120fps', label: 'Mocap Capture Rate' },
         { value: '300+', label: 'Rigs Built' },

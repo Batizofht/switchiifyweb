@@ -18,9 +18,9 @@ const SearchInput = forwardRef<HTMLInputElement, SearchInputProps>(
     return (
       <motion.div
         initial={{ width: 0, opacity: 0 }}
-        animate={{ width: isExpanded ? 280 : 0, opacity: isExpanded ? 1 : 0 }}
+        animate={{ width: isExpanded ? '100%' : 0, opacity: isExpanded ? 1 : 0 }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="flex items-center overflow-hidden"
+        className="flex items-center overflow-hidden min-w-0"
       >
         <div className={`flex items-center w-full px-4 py-2 rounded-full border transition-all ${
           variant === 'glass' ? glassStyle : `${solidLight} ${solidDark}`

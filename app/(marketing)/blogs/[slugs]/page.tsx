@@ -6,13 +6,7 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slugs: post.slug }));
 }
 
-const categoryColors: Record<string, string> = {
-  Product: 'text-blue-400 bg-blue-400/10',
-  Engineering: 'text-green-400 bg-green-400/10',
-  Design: 'text-purple-400 bg-purple-400/10',
-  Research: 'text-cyan-400 bg-cyan-400/10',
-  Company: 'text-orange-400 bg-orange-400/10',
-};
+const CATEGORY_CHIP_CLASS = 'text-zinc-300 bg-white/10';
 
 export default async function BlogArticlePage({
   params,
@@ -27,7 +21,7 @@ export default async function BlogArticlePage({
   }
 
   const related = blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 2);
-  const colorClass = categoryColors[post.category] ?? 'text-zinc-400 bg-zinc-400/10';
+  const colorClass = CATEGORY_CHIP_CLASS;
 
   return (
     <div className="bg-black min-h-screen">
@@ -73,7 +67,7 @@ export default async function BlogArticlePage({
                 <Link
                   key={r.slug}
                   href={`/blogs/${r.slug}`}
-                  className="group p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors"
+                  className="group p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
                 >
                   <h3 className="text-white font-semibold text-base mb-2 group-hover:text-zinc-300 transition-colors">
                     {r.title}

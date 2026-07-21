@@ -4,10 +4,10 @@ export const companyLinks = [
   { label: 'Community', href: '/community' },
   { label: 'About', href: '/about' },
   { label: 'Leadership', href: '/leadership' },
-  { label: 'Pricing', href: '/pricing' },
   { label: 'Blog', href: '/blogs' },
   { label: 'Investors', href: '/investors' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Stockify', href: 'https://stockify.rw', external: true },
 ];
 
 export const serviceLinks = [
@@ -21,6 +21,7 @@ export const serviceLinks = [
   { label: '3D world design', href: '/services/3d-design', highlight: false },
   { label: 'Motion, animation & simulation', href: '/services/animation', highlight: false },
   { label: 'Game engine and graphics systems', href: '/services/game-engine', highlight: false },
+  { label: 'Self-expanding system solutions', href: 'https://stockify.rw', highlight: false, external: true },
 ];
 
 export const researchLinks = [

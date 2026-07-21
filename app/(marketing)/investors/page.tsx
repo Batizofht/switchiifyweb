@@ -56,7 +56,7 @@ export default function InvestorsPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             Building the Future of Technology.
           </motion.h1>
@@ -93,7 +93,7 @@ export default function InvestorsPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={statsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-6 md:p-8 rounded-2xl border border-zinc-800 text-center"
+                className="p-6 md:p-8 rounded-md border border-white/10 text-center"
               >
                 <p className="text-3xl md:text-4xl font-bold text-white mb-2">{s.value}</p>
                 <p className="text-zinc-500 text-sm">{s.label}</p>
@@ -122,7 +122,7 @@ export default function InvestorsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={thesisInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800"
+                className="p-8 rounded-md bg-white/[0.03] border border-white/10"
               >
                 <div className="w-1.5 h-1.5 bg-white mb-5" />
                 <h3 className="text-white font-semibold text-base mb-3">{t.title}</h3>
@@ -141,7 +141,7 @@ export default function InvestorsPage() {
             {[
               { color: 'bg-green-400', name: 'Gamingar', desc: 'Next-generation gaming interface with adaptive input and cinematic 3D worlds.', href: '/gamingar' },
               { color: 'bg-cyan-400', name: 'Neuro AI', desc: 'The only AI that learns from YOU — your voice, habits, and decisions.', href: '/neuroai' },
-              { color: 'bg-purple-400', name: 'OpenSpace', desc: 'Business collaboration platform built for the way modern teams actually work.', href: '/openspace' },
+              { color: 'bg-white', name: 'OpenSpace', desc: 'Business collaboration platform built for the way modern teams actually work.', href: '/openspace' },
             ].map((p) => (
               <div key={p.name} className="flex items-center gap-5 py-5 border-b border-zinc-900">
                 <div className={`w-2 h-2 rounded-full ${p.color} shrink-0`} />

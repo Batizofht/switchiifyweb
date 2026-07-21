@@ -124,7 +124,7 @@ function NodeNetwork() {
             ctx.beginPath();
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
-            ctx.strokeStyle = `rgba(167,139,250,${alpha})`; // violet-400
+            ctx.strokeStyle = `rgba(34,211,238,${alpha})`; // cyan-400
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -135,7 +135,7 @@ function NodeNetwork() {
       for (const n of nodes) {
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(167,139,250,0.55)';
+        ctx.fillStyle = 'rgba(34,211,238,0.55)';
         ctx.fill();
       }
 
@@ -236,7 +236,7 @@ export default function NeuroAIPage() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.0] mb-5 max-w-2xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.0] mb-5 max-w-2xl"
           >
             Neuro AI
           </motion.h1>
@@ -311,7 +311,7 @@ export default function NeuroAIPage() {
             {/* Right: 2 feature cards */}
             <div className="flex flex-col gap-4">
               <Reveal delay={0.1}>
-                <article className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
                   <div className="w-1.5 h-1.5 bg-cyan-400 mb-5" aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-3">
                     Behavioral Adaptation
@@ -323,7 +323,7 @@ export default function NeuroAIPage() {
               </Reveal>
 
               <Reveal delay={0.2}>
-                <article className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
                   <div className="w-1.5 h-1.5 bg-cyan-400 mb-5" aria-hidden="true" />
                   <h3 className="text-white font-semibold text-base mb-3">
                     Predictive Assistance
@@ -335,7 +335,7 @@ export default function NeuroAIPage() {
               </Reveal>
 
               <Reveal delay={0.3}>
-                <div className="flex items-center gap-4 px-6 py-4 rounded-2xl border border-zinc-800">
+                <div className="flex items-center gap-4 px-6 py-4 rounded-md border border-white/10">
                   <div
                     className="w-10 h-10 rounded-full shrink-0 flex items-center justify-center"
                     style={{ background: 'rgba(34,211,238,0.10)' }}
@@ -361,7 +361,7 @@ export default function NeuroAIPage() {
       <section className="py-24 md:py-32 bg-zinc-950">
         <div className="max-w-[1400px] mx-auto px-6 md:px-10">
           <Reveal>
-            <div className="p-8 md:p-12 rounded-2xl bg-zinc-900 border border-zinc-800">
+            <div className="p-8 md:p-12 rounded-md bg-white/[0.03] border border-white/10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
                 {/* Text */}
@@ -483,7 +483,7 @@ export default function NeuroAIPage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 55% 60% at 50% 110%, rgba(167,139,250,0.08) 0%, transparent 70%)',
+              'radial-gradient(ellipse 55% 60% at 50% 110%, rgba(34,211,238,0.08) 0%, transparent 70%)',
           }}
           aria-hidden="true"
         />

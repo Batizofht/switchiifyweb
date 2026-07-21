@@ -10,21 +10,15 @@ interface BlogCardProps {
   image?: string;
 }
 
-const categoryColors: Record<string, string> = {
-  Product: 'text-blue-400 bg-blue-400/10',
-  Engineering: 'text-green-400 bg-green-400/10',
-  Design: 'text-purple-400 bg-purple-400/10',
-  Research: 'text-cyan-400 bg-cyan-400/10',
-  Company: 'text-orange-400 bg-orange-400/10',
-};
+const CATEGORY_CHIP_CLASS = 'text-zinc-300 bg-white/10';
 
 export function BlogCard({ slug, title, excerpt, category, date, readTime, image }: BlogCardProps) {
-  const colorClass = categoryColors[category] ?? 'text-zinc-400 bg-zinc-400/10';
+  const colorClass = CATEGORY_CHIP_CLASS;
 
   return (
     <Link
       href={`/blogs/${slug}`}
-      className="group flex flex-col rounded-2xl bg-zinc-900 dark:bg-zinc-900 bg-white border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
+      className="group flex flex-col rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 overflow-hidden transition-all duration-300 hover:-translate-y-0.5"
     >
       {image && (
         <div className="relative h-48 overflow-hidden">

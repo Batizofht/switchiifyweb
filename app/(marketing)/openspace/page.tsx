@@ -151,7 +151,7 @@ export default function OpenSpacePage() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xs uppercase tracking-[0.25em] text-purple-400 mb-5"
+            className="text-xs uppercase tracking-[0.25em] text-zinc-400 mb-5"
           >
             Switchiify OpenSpace
           </motion.p>
@@ -261,7 +261,7 @@ export default function OpenSpacePage() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={statsRef.isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.55, delay: 0.1 + i * 0.1 }}
-                className="p-8 rounded-2xl bg-zinc-900 dark:bg-zinc-900 border border-zinc-800 dark:border-zinc-800 hover:border-zinc-700 dark:hover:border-zinc-700 transition-colors text-center"
+                className="p-8 rounded-md bg-white/[0.03] border border-white/10 hover:border-zinc-700 dark:hover:border-zinc-700 transition-colors text-center"
               >
                 <p
                   className="text-5xl font-bold mb-2 tabular-nums"
@@ -308,7 +308,7 @@ export default function OpenSpacePage() {
               >
                 <Link
                   href={card.href}
-                  className="group relative block h-64 rounded-2xl overflow-hidden border border-zinc-800 dark:border-zinc-800 hover:border-zinc-600 dark:hover:border-zinc-600 transition-colors"
+                  className="group relative block h-64 rounded-md overflow-hidden border border-white/10 hover:border-white/20 transition-colors"
                 >
                   {/* Background image */}
                   <div
@@ -382,7 +382,7 @@ export default function OpenSpacePage() {
                   <CheckIcon />
                 </div>
                 <div>
-                  <h3 className="text-white dark:text-white font-semibold text-base mb-1 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-white dark:text-white font-semibold text-base mb-1 group-hover:text-zinc-300 transition-colors">
                     {feat.title}
                   </h3>
                   <p className="text-zinc-500 dark:text-zinc-500 text-sm leading-relaxed">
@@ -418,7 +418,7 @@ export default function OpenSpacePage() {
             transition={reveal.transition}
           >
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-6">Get started</p>
-            <h2 className="text-5xl md:text-7xl font-bold text-white dark:text-white tracking-tight leading-[1.0] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white dark:text-white tracking-tight leading-[1.0] mb-6">
               Start building with<br />OpenSpace today.
             </h2>
             <p className="text-zinc-400 dark:text-zinc-400 text-base leading-relaxed max-w-md mx-auto mb-10">
@@ -433,10 +433,10 @@ export default function OpenSpacePage() {
                 Sign Up Free
               </Link>
               <Link
-                href="/pricing"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-sm border border-white/25 text-white text-xs font-semibold uppercase tracking-[0.1em] hover:border-white/60 hover:bg-white/5 transition-all duration-300"
               >
-                View Pricing
+                Talk to Sales
               </Link>
             </div>
           </motion.div>

@@ -105,7 +105,7 @@ function WireframeGlobe() {
           } else {
             ctx.lineTo(p.x, p.y);
           }
-          ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
+          ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
         }
         ctx.stroke();
       }
@@ -125,15 +125,15 @@ function WireframeGlobe() {
           } else {
             ctx.lineTo(p.x, p.y);
           }
-          ctx.strokeStyle = `rgba(59,130,246,${alpha})`;
+          ctx.strokeStyle = `rgba(255,255,255,${alpha})`;
         }
         ctx.stroke();
       }
 
       // Glowing center dot
       const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, R * 0.15);
-      grad.addColorStop(0, 'rgba(59,130,246,0.18)');
-      grad.addColorStop(1, 'rgba(59,130,246,0)');
+      grad.addColorStop(0, 'rgba(255,255,255,0.18)');
+      grad.addColorStop(1, 'rgba(255,255,255,0)');
       ctx.beginPath();
       ctx.arc(cx, cy, R * 0.15, 0, Math.PI * 2);
       ctx.fillStyle = grad;
@@ -338,7 +338,7 @@ export default function EnterprisePage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(59,130,246,0.12) 0%, transparent 70%)',
+              'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(255,255,255,0.12) 0%, transparent 70%)',
           }}
           aria-hidden="true"
         />
@@ -360,7 +360,7 @@ export default function EnterprisePage() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-xs uppercase tracking-[0.25em] text-blue-400 mb-6"
+            className="text-xs uppercase tracking-[0.25em] text-zinc-400 mb-6"
           >
             Switchiify Enterprise
           </motion.p>
@@ -369,7 +369,7 @@ export default function EnterprisePage() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-[1.0] mb-6 max-w-3xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.0] mb-6 max-w-3xl"
           >
             Powering mission-critical systems across 16+ countries
           </motion.h1>
@@ -440,18 +440,18 @@ export default function EnterprisePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {premiumSolutions.map((sol, i) => (
               <Reveal key={sol.id} delay={i * 0.12}>
-                <article className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors flex flex-col h-full">
+                <article className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors flex flex-col h-full">
                   <p className="text-xs uppercase tracking-[0.2em] text-zinc-500 mb-4">{sol.eyebrow}</p>
                   <h3 className="text-white font-semibold text-lg mb-3">{sol.title}</h3>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1">{sol.description}</p>
                   {/* Inline stat */}
                   <div className="flex items-center gap-4 mb-6 pt-4 border-t border-zinc-800">
-                    <span className="text-2xl font-bold text-blue-400 leading-none">{sol.stat}</span>
+                    <span className="text-2xl font-bold text-white leading-none">{sol.stat}</span>
                     <span className="text-zinc-500 text-xs leading-tight">{sol.statLabel}</span>
                   </div>
                   <Link
                     href={sol.href}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:text-blue-400 transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white hover:text-zinc-300 transition-colors group"
                   >
                     {sol.cta}
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
@@ -492,7 +492,7 @@ export default function EnterprisePage() {
             <div className="flex flex-col gap-5">
               {checklistItems.map((item, i) => (
                 <Reveal key={item.id} delay={i * 0.08}>
-                  <div className="flex items-start gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors">
+                  <div className="flex items-start gap-4 p-4 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors">
                     <CheckIcon />
                     <div>
                       <p className="text-white text-sm font-semibold mb-0.5">{item.label}</p>
@@ -566,13 +566,13 @@ export default function EnterprisePage() {
           <div className="flex gap-4 overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 lg:grid-cols-5 md:overflow-visible">
             {techHighlights.map((item, i) => (
               <Reveal key={item.title} delay={i * 0.07}>
-                <div className="p-5 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors min-w-[220px] md:min-w-0 flex flex-col gap-3">
+                <div className="p-5 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors min-w-[220px] md:min-w-0 flex flex-col gap-3">
                   <div
                     className="w-7 h-7 rounded-lg flex items-center justify-center"
-                    style={{ background: 'rgba(59,130,246,0.12)' }}
+                    style={{ background: 'rgba(255,255,255,0.12)' }}
                     aria-hidden="true"
                   >
-                    <div className="w-2 h-2 rounded-full bg-blue-500" />
+                    <div className="w-2 h-2 rounded-full bg-white" />
                   </div>
                   <p className="text-white text-sm font-semibold leading-snug">{item.title}</p>
                   <p className="text-zinc-500 text-xs leading-relaxed">{item.detail}</p>
@@ -591,7 +591,7 @@ export default function EnterprisePage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 50% 55% at 50% 105%, rgba(59,130,246,0.08) 0%, transparent 65%)',
+              'radial-gradient(ellipse 50% 55% at 50% 105%, rgba(255,255,255,0.08) 0%, transparent 65%)',
           }}
           aria-hidden="true"
         />
@@ -612,13 +612,13 @@ export default function EnterprisePage() {
               <Reveal key={item.label} delay={i * 0.1}>
                 <Link
                   href={item.href}
-                  className="group flex items-start justify-between p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-600 transition-colors"
+                  className="group flex items-start justify-between p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
                 >
                   <div>
                     <p className="text-white font-semibold text-base mb-1">{item.label}</p>
                     <p className="text-zinc-500 text-xs leading-relaxed">{item.sub}</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-blue-400 transition-colors mt-0.5 shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-zinc-600 group-hover:text-white transition-colors mt-0.5 shrink-0" />
                 </Link>
               </Reveal>
             ))}

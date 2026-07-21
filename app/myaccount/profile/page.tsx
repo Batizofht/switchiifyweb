@@ -17,7 +17,7 @@ export default function ProfilePage() {
         Manage your personal information and how it appears across Switchiify.
       </p>
 
-      <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 mb-6 flex items-center gap-5">
+      <div className="p-6 rounded-md bg-white/[0.03] border border-white/10 mb-6 flex items-center gap-5">
         <div className="w-16 h-16 rounded-full bg-zinc-700 flex items-center justify-center shrink-0">
           <span className="text-zinc-300 text-xl font-semibold">{name[0]}</span>
         </div>
@@ -28,7 +28,7 @@ export default function ProfilePage() {
       </div>
 
       <form
-        className="flex flex-col gap-5 p-6 rounded-2xl bg-zinc-900 border border-zinc-800 mb-6"
+        className="flex flex-col gap-5 p-6 rounded-md bg-white/[0.03] border border-white/10 mb-6"
         onSubmit={(e) => e.preventDefault()}
       >
         <div>
@@ -49,7 +49,7 @@ export default function ProfilePage() {
         </div>
       </form>
 
-      <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800">
+      <div className="p-6 rounded-md bg-white/[0.03] border border-white/10">
         <h2 className="text-white font-semibold text-base mb-1">Password</h2>
         <p className="text-zinc-500 text-xs mb-5">Change the password used to sign in to your account.</p>
         <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>

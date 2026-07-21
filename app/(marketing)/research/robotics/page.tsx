@@ -37,7 +37,7 @@ export default function RoboticsResearchPage() {
     <div className="bg-black min-h-screen">
       {/* Hero */}
       <section className="relative min-h-[60vh] flex flex-col justify-end overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-950/20 via-zinc-950 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-zinc-950 to-black" />
         <div
           className="absolute inset-0 opacity-[0.15]"
           style={{
@@ -50,7 +50,7 @@ export default function RoboticsResearchPage() {
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="text-xs uppercase tracking-[0.25em] text-orange-400 mb-5 font-medium"
+            className="text-xs uppercase tracking-[0.25em] text-zinc-400 mb-5 font-medium"
           >
             Switchiify Research — Robotics
           </motion.p>
@@ -58,7 +58,7 @@ export default function RoboticsResearchPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] max-w-4xl mb-6"
           >
             Machines that move<br />like they understand.
           </motion.h1>
@@ -110,9 +110,9 @@ export default function RoboticsResearchPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={programsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors"
+                className="p-8 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors"
               >
-                <div className="w-1.5 h-1.5 bg-orange-400 mb-6" />
+                <div className="w-1.5 h-1.5 bg-white mb-6" />
                 <h3 className="text-white font-semibold text-lg mb-2">{p.title}</h3>
                 <p className="text-zinc-500 text-sm leading-relaxed">{p.desc}</p>
               </motion.div>

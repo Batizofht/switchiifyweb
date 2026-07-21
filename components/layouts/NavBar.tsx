@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { MegaMenu } from './MegaMenu';
 import Button from '../ui/Button/Button';
 import { SearchInput } from '../ui/Input';
+import { companyLinks, serviceLinks, researchLinks } from './megaMenuData';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const navItems = [
@@ -13,18 +14,39 @@ const navItems = [
   { label: 'Company', hasDropdown: true },
   { label: 'Gamingar', href: '/gamingar' },
   { label: 'OpenSpace', href: '/openspace' },
+  { label: 'Stockify', href: 'https://stockify.rw', external: true },
   { label: 'Neuro AI', href: '/neuroai' },
 ];
+
+const mobileCategories = {
+  company: { label: 'Company', links: companyLinks },
+  services: { label: 'Services', links: serviceLinks },
+  research: { label: 'Research', links: researchLinks },
+} as const;
+
+type MobileView = 'root' | keyof typeof mobileCategories;
+
+const ExternalIcon = () => (
+  <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
 
 export function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [mobileView, setMobileView] = useState<MobileView>('root');
   const searchRef = useRef<HTMLInputElement>(null);
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const menuTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const showBg = isScrolled || isMenuOpen || isMobileOpen;
+  const showBg = isScrolled || isMenuOpen || isMobileOpen || isSearchOpen;
+
+  const closeMobileMenu = () => {
+    setIsMobileOpen(false);
+    setMobileView('root');
+  };
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 30);
@@ -76,7 +98,7 @@ export function NavBar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-14">
+      <nav className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-14 gap-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
@@ -88,8 +110,8 @@ export function NavBar() {
           />
           <span
             className={`text-sm font-semibold tracking-tight ${
-              showBg ? 'text-zinc-900 dark:text-white' : 'text-white'
-            }`}
+              isSearchOpen ? 'hidden sm:inline' : ''
+            } ${showBg ? 'text-zinc-900 dark:text-white' : 'text-white'}`}
           >
             Switchiify
           </span>
@@ -115,6 +137,17 @@ export function NavBar() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
+            ) : item.external ? (
+              <a
+                key={item.label}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${textColor}`}
+              >
+                {item.label}
+                <ExternalIcon />
+              </a>
             ) : (
               <Link
                 key={item.label}
@@ -128,10 +161,10 @@ export function NavBar() {
         </div>
 
         {/* Right side */}
-        <div className="flex items-center gap-3">
+        <div className={`flex items-center gap-3 ${isSearchOpen ? 'flex-1 min-w-0 justify-end' : ''}`}>
           <AnimatePresence mode="wait">
             {isSearchOpen ? (
-              <div ref={searchContainerRef}>
+              <div ref={searchContainerRef} className="flex-1 min-w-0 max-w-[280px]">
                 <SearchInput
                   key="search"
                   ref={searchRef}
@@ -162,11 +195,11 @@ export function NavBar() {
                     Sign in
                   </Button>
                 </Link>
-                <Link href="/openspace" className="hidden md:block">
+                <a href="https://app.stockify.rw/register" target="_blank" rel="noopener noreferrer" className="hidden md:block">
                   <Button variant="primary" size="sm">
                     Join OpenSpace
                   </Button>
-                </Link>
+                </a>
                 <button
                   onClick={() => {
                     setIsSearchOpen(true);
@@ -208,30 +241,141 @@ export function NavBar() {
       <AnimatePresence>
         {isMobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 overflow-hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.15 }}
+            className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 max-h-[calc(100dvh-3.5rem)] overflow-y-auto"
           >
-            <div className="px-6 py-6 flex flex-col gap-5">
-              {navItems.map((item) => (
-                <Link
-                  key={item.label}
-                  href={item.href ?? '#'}
-                  onClick={() => setIsMobileOpen(false)}
-                  className="text-zinc-300 hover:text-white text-base font-medium transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
-                <Link href="/signin" onClick={() => setIsMobileOpen(false)}>
-                  <Button variant="outline" size="md" className="w-full">Sign in</Button>
-                </Link>
-                <Link href="/openspace" onClick={() => setIsMobileOpen(false)}>
-                  <Button variant="primary" size="md" className="w-full">Join OpenSpace</Button>
-                </Link>
-              </div>
+            <div className="px-6 py-6">
+              <AnimatePresence mode="wait" initial={false}>
+                {mobileView === 'root' ? (
+                  <motion.div
+                    key="root"
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -16 }}
+                    transition={{ duration: 0.18, ease: 'easeOut' }}
+                    className="flex flex-col gap-5"
+                  >
+                    {navItems.map((item) => {
+                      if (item.hasDropdown) {
+                        return (
+                          <div key={item.label} className="flex flex-col gap-5">
+                            <button
+                              onClick={() => setMobileView('company')}
+                              className="flex items-center justify-between text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                            >
+                              {item.label}
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                            <button
+                              onClick={() => setMobileView('services')}
+                              className="flex items-center justify-between text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                            >
+                              Services
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                            <button
+                              onClick={() => setMobileView('research')}
+                              className="flex items-center justify-between text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                            >
+                              Research
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </button>
+                          </div>
+                        );
+                      }
+                      if (item.external) {
+                        return (
+                          <a
+                            key={item.label}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={closeMobileMenu}
+                            className="flex items-center gap-2 text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                          >
+                            {item.label}
+                            <ExternalIcon />
+                          </a>
+                        );
+                      }
+                      return (
+                        <Link
+                          key={item.label}
+                          href={item.href ?? '#'}
+                          onClick={closeMobileMenu}
+                          className="text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                        >
+                          {item.label}
+                        </Link>
+                      );
+                    })}
+                    <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
+                      <Link href="/signin" onClick={closeMobileMenu}>
+                        <Button variant="outline" size="md" className="w-full">Sign in</Button>
+                      </Link>
+                      <a href="https://app.stockify.rw/register" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+                        <Button variant="primary" size="md" className="w-full">Join OpenSpace</Button>
+                      </a>
+                    </div>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key={mobileView}
+                    initial={{ opacity: 0, x: 16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 16 }}
+                    transition={{ duration: 0.18, ease: 'easeOut' }}
+                    className="flex flex-col gap-5"
+                  >
+                    <button
+                      onClick={() => setMobileView('root')}
+                      className="flex items-center gap-2 text-zinc-400 hover:text-white text-sm font-medium transition-colors mb-1"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                      </svg>
+                      Back
+                    </button>
+                    <span className="text-xs uppercase tracking-[0.2em] text-zinc-500 font-semibold">
+                      {mobileCategories[mobileView].label}
+                    </span>
+                    {mobileCategories[mobileView].links.map((link) => {
+                      const isExternal = (link as { external?: boolean }).external;
+                      return isExternal ? (
+                        <a
+                          key={link.label}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={closeMobileMenu}
+                          className="flex items-center gap-2 text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                        >
+                          {link.label}
+                          <ExternalIcon />
+                        </a>
+                      ) : (
+                        <Link
+                          key={link.label}
+                          href={link.href}
+                          onClick={closeMobileMenu}
+                          className="text-zinc-300 hover:text-white text-base font-medium transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      );
+                    })}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         )}

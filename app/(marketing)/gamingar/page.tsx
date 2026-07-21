@@ -217,7 +217,7 @@ export default function GamingarPage() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="relative"
             >
-              <div className="rounded-2xl overflow-hidden bg-zinc-900 border border-zinc-800">
+              <div className="rounded-md overflow-hidden bg-white/[0.03] border border-white/10">
                 <video
                   className="w-full aspect-video object-cover"
                   autoPlay
@@ -230,7 +230,7 @@ export default function GamingarPage() {
               </div>
 
               {/* Floating label */}
-              <div className="absolute -bottom-4 -left-4 bg-zinc-900 border border-zinc-800 rounded-xl px-4 py-3 flex items-center gap-3">
+              <div className="absolute -bottom-4 -left-4 bg-black border border-white/10 rounded-md px-4 py-3 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-white text-xs font-medium">Live engine preview</span>
               </div>
@@ -266,7 +266,7 @@ export default function GamingarPage() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={featInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: i * 0.12 }}
-                className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-colors group"
+                className="p-6 rounded-md bg-white/[0.03] border border-white/10 hover:border-white/20 transition-colors group"
               >
                 {/* Green accent dot */}
                 <div className="w-1.5 h-1.5 bg-green-400 mb-6" />
@@ -313,7 +313,7 @@ export default function GamingarPage() {
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-5">
               Release window
             </p>
-            <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.0] mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.0] mb-6">
               Gamingar is Coming.
             </h2>
             <p className="text-zinc-400 text-base leading-relaxed max-w-md mx-auto">
@@ -334,7 +334,7 @@ export default function GamingarPage() {
                 key={unit.label}
                 className="flex flex-col items-center gap-2 w-16 md:w-24"
               >
-                <div className="w-full aspect-square rounded-2xl bg-zinc-900 border border-zinc-800 flex items-center justify-center">
+                <div className="w-full aspect-square rounded-md bg-white/[0.03] border border-white/10 flex items-center justify-center">
                   <span className="text-2xl md:text-4xl font-black text-white font-mono tabular-nums">
                     {unit.value}
                   </span>
