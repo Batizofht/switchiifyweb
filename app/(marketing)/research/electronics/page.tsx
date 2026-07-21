@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: "Hardware Built for What's Next",
+  description: 'Our electronics division designs the sensor arrays, control boards, and low-power systems that give Switchiify hardware its edge — from Gamingar peripherals to OpenSpace devices.',
+  path: '/research/electronics',
+});
 
 export default function ElectronicsResearchPage() {
   return (

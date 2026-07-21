@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Game Engine Systems',
+  description: "We build and extend real-time engines — the same discipline behind Gamingar's Adaptive Input Resolution and rendering pipeline.",
+  path: '/services/game-engine',
+});
 
 export default function GameEnginePage() {
   return (

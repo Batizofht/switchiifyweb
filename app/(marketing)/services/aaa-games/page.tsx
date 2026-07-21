@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'AAA Open-World Games',
+  description: 'We partner with studios and publishers to deliver open-world titles at AAA scale — from world systems to live-service infrastructure.',
+  path: '/services/aaa-games',
+});
 
 export default function AaaGamesPage() {
   return (

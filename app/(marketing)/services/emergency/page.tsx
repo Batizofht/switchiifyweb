@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Emergency Response AI',
+  description: "Mission-critical AI systems engineered for emergency response scenarios — designed to perform under load, under pressure, and under scrutiny.",
+  path: '/services/emergency',
+});
 
 export default function EmergencyPage() {
   return (

@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Blog',
+  description: 'Product, engineering, design, and research updates from the team building Gamingar, Neuro AI, and OpenSpace.',
+  path: '/blogs',
+});
 
 const blogNavLinks = [
   { label: 'All Posts', href: '/blogs' },

@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Terms & Conditions',
+  description: "The terms governing your use of Switchiify's products, including Gamingar, Neuro AI, and OpenSpace.",
+  path: '/terms',
+});
+
 export default function TermsPage() {
   return (
     <div className="bg-black min-h-screen pt-40 pb-24 px-6 md:px-10">

@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Privacy Policy',
+  description: 'How Switchiify Platforms Inc. collects, uses, and protects your information across Gamingar, Neuro AI, and OpenSpace.',
+  path: '/legal',
+});
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-black min-h-screen pt-40 pb-24 px-6 md:px-10">

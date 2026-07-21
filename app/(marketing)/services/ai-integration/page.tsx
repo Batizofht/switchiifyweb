@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'AI Device Integration',
+  description: 'Connect any device to the Switchiify AI ecosystem — from sensors to enterprise hardware fleets, we build the integration layer that lets your devices talk to Neuro AI and act on what it learns.',
+  path: '/services/ai-integration',
+});
 
 export default function AiIntegrationPage() {
   return (

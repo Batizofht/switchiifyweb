@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Where Every Product Starts',
+  description: 'Our laboratory is where early prototypes across every Switchiify platform get tested against real conditions before anything ships — from load testing to human trials.',
+  path: '/research/laboratory',
+});
 
 export default function LaboratoryResearchPage() {
   return (

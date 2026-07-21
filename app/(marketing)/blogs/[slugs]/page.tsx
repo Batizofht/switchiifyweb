@@ -1,9 +1,35 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { blogPosts } from '@/lib/blogData';
+import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slugs: post.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slugs: string }>;
+}): Promise<Metadata> {
+  const { slugs } = await params;
+  const post = blogPosts.find((p) => p.slug === slugs);
+
+  if (!post) {
+    return buildPageMetadata({
+      title: 'Blog',
+      description: 'Product, engineering, design, and research updates from Switchiify.',
+      path: `/blogs/${slugs}`,
+    });
+  }
+
+  return buildPageMetadata({
+    title: post.title,
+    description: post.excerpt,
+    path: `/blogs/${post.slug}`,
+    image: { url: `${SITE_URL}${post.image}`, alt: post.title },
+  });
 }
 
 const CATEGORY_CHIP_CLASS = 'text-zinc-300 bg-white/10';

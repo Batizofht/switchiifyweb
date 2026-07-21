@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Motion, Animation & Simulation',
+  description: 'From character motion capture to physics-driven simulation, our animation team brings Gamingar-grade motion fidelity to any production.',
+  path: '/services/animation',
+});
 
 export default function AnimationPage() {
   return (

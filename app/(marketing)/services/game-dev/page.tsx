@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: 'Game Development',
+  description: 'From prototype to launch, our studio builds games on the same engine and tooling that powers Gamingar — cinematic, adaptive, and built to scale.',
+  path: '/services/game-dev',
+});
 
 export default function GameDevPage() {
   return (

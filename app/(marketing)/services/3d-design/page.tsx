@@ -1,4 +1,12 @@
+import type { Metadata } from 'next';
 import { ServiceDetailTemplate } from '@/components/ui/ServiceDetailTemplate';
+import { buildPageMetadata } from '@/lib/seo';
+
+export const metadata: Metadata = buildPageMetadata({
+  title: '3D World Design',
+  description: "Our world design team builds environments, props, and lighting systems that hold up under Gamingar's cinematic rendering pipeline.",
+  path: '/services/3d-design',
+});
 
 export default function ThreeDDesignPage() {
   return (
