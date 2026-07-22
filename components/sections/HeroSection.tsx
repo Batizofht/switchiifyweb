@@ -97,7 +97,7 @@ export function HeroSection() {
       </div>
 
       {/* Bottom: product cards */}
-      <div className="relative z-10 px-8 md:px-16 lg:px-20 pb-10">
+      <div className="relative z-10 px-8 mt-4 md:mt-0 md:px-16 lg:px-20 pb-10">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
