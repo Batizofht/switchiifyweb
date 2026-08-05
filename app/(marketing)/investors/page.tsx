@@ -43,7 +43,7 @@ export default function InvestorsPage() {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black" />
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 pt-40">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 pt-40">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export default function InvestorsPage() {
 
       {/* Stats */}
       <section ref={statsRef} className="py-16 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((s, i) => (
               <motion.div
@@ -105,7 +105,7 @@ export default function InvestorsPage() {
 
       {/* Investment Thesis */}
       <section ref={thesisRef} className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={thesisInView ? { opacity: 1, y: 0 } : {}}
@@ -134,7 +134,7 @@ export default function InvestorsPage() {
 
       {/* Products */}
       <section className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-12">Our Products</p>
           <div className="flex flex-col gap-6">
             {[
@@ -159,7 +159,7 @@ export default function InvestorsPage() {
 
       {/* CTA */}
       <section className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-5">Get In Touch</p>
           <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
             Interested in Investing?

@@ -101,7 +101,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 pointer-events-none" />
 
         {/* Hero content — anchored to bottom-left */}
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 md:pb-28">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 md:pb-28">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ A global technology company, headquartered in Kigali.
 
       {/* ── 2. MISSION ──────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
             {/* Text */}
@@ -212,7 +212,7 @@ A global technology company, headquartered in Kigali.
 
       {/* ── 2.5. OUR STORY / LEADERSHIP ─────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <Reveal>
@@ -252,7 +252,7 @@ A global technology company, headquartered in Kigali.
 
       {/* ── 3. VALUES ───────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-zinc-950 dark:bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <Reveal className="mb-14">
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
@@ -278,7 +278,7 @@ A global technology company, headquartered in Kigali.
 
       {/* ── 4. PRODUCTS ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <Reveal className="mb-14">
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-4">
@@ -330,7 +330,7 @@ A global technology company, headquartered in Kigali.
 
       {/* ── 5. FOOTER CTA ───────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-zinc-950 dark:bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
 
           {/* Collaborative workspace image as a quiet backdrop — cropped wide */}
           <Reveal>

@@ -55,7 +55,7 @@ export default async function BlogArticlePage({
       <section className="relative min-h-[55vh] flex flex-col justify-end overflow-hidden">
         <img src={post.image} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/30" />
-        <div className="relative z-10 max-w-3xl mx-auto w-full px-6 md:px-10 pb-16 pt-40">
+        <div className="relative z-10 max-w-3xl mx-auto w-full px-3 sm:px-6 md:px-10 pb-16 pt-40">
           <Link href="/blogs" className="text-zinc-400 hover:text-white text-xs transition-colors mb-6 inline-block">
             ← Back to Blog
           </Link>
@@ -78,7 +78,7 @@ export default async function BlogArticlePage({
       {/* Article body */}
       <section className="py-16 md:py-20">
         <article
-          className="prose-switchiify max-w-3xl mx-auto px-6 md:px-10"
+          className="prose-switchiify max-w-3xl mx-auto px-3 sm:px-6 md:px-10"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </section>
@@ -86,7 +86,7 @@ export default async function BlogArticlePage({
       {/* Related posts */}
       {related.length > 0 && (
         <section className="py-16 border-t border-zinc-900">
-          <div className="max-w-3xl mx-auto px-6 md:px-10">
+          <div className="max-w-3xl mx-auto px-3 sm:px-6 md:px-10">
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-8">More in {post.category}</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {related.map((r) => (
@@ -107,7 +107,7 @@ export default async function BlogArticlePage({
       )}
 
       {/* CTA */}
-      <section className="py-20 border-t border-zinc-900 text-center px-6">
+      <section className="py-20 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Want more from Switchiify?</p>
         <Link
           href="/blogs"

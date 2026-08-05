@@ -29,7 +29,7 @@ export default function PartnersPage() {
 
   return (
     <div className="bg-black min-h-screen">
-      <section className="relative pt-40 pb-20 px-6 md:px-10">
+      <section className="relative pt-40 pb-20 px-3 sm:px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -58,7 +58,7 @@ export default function PartnersPage() {
       </section>
 
       <section ref={tiersRef} className="py-16 md:py-24 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {tiers.map((t, i) => (
             <motion.div
               key={t.name}
@@ -86,7 +86,7 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-zinc-900 text-center px-6">
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Ready to apply to the partnership program?</p>
         <Link
           href="/contact"

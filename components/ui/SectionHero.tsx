@@ -37,7 +37,7 @@ export function SectionHero({
         <div className={`absolute inset-0 bg-gradient-to-b ${bgColor}`} />
       )}
 
-      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 pt-40">
+      <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 pt-40">
         {eyebrow && (
           <motion.p
             initial={{ opacity: 0, y: 8 }}

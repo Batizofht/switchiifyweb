@@ -13,13 +13,21 @@ const practices = [
   { title: 'Data Minimization', desc: 'Neuro AI is built to learn from patterns, not to store raw personal data it doesn\'t need.' },
 ];
 
+const disclosureSteps = [
+  { num: '01', title: 'Report privately', desc: 'Send details to our security team through the Contact page — please don\'t disclose issues publicly before we\'ve had a chance to respond.' },
+  { num: '02', title: 'We confirm and investigate', desc: 'You\'ll get an acknowledgement, typically within a few business days, while we reproduce and assess severity.' },
+  { num: '03', title: 'We fix and follow up', desc: 'Once resolved, we\'ll let you know what changed and, with your permission, credit you for the report.' },
+];
+
 export default function SecurityPage() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
+  const stepsRef = useRef(null);
+  const stepsInView = useInView(stepsRef, { once: true, margin: '-80px' });
 
   return (
     <div className="bg-black min-h-screen">
-      <section className="relative pt-40 pb-20 px-6 md:px-10">
+      <section className="relative pt-40 pb-20 px-3 sm:px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -48,7 +56,7 @@ export default function SecurityPage() {
       </section>
 
       <section ref={ref} className="py-16 md:py-24 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {practices.map((p, i) => (
             <motion.div
               key={p.title}
@@ -64,7 +72,27 @@ export default function SecurityPage() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-zinc-900 text-center px-6">
+      <section ref={stepsRef} className="py-16 md:py-24 border-t border-zinc-900">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
+          <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-10">Responsible Disclosure</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {disclosureSteps.map((s, i) => (
+              <motion.div
+                key={s.num}
+                initial={{ opacity: 0, y: 16 }}
+                animate={stepsInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: i * 0.12 }}
+              >
+                <span className="text-zinc-600 text-xs font-mono tracking-widest">{s.num}</span>
+                <h3 className="text-white font-semibold text-base mt-3 mb-2">{s.title}</h3>
+                <p className="text-zinc-500 text-sm leading-relaxed">{s.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Found a vulnerability? We want to hear from you.</p>
         <Link
           href="/contact"

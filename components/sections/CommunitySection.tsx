@@ -19,7 +19,7 @@ export function CommunitySection() {
       {/* Top line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/8 to-transparent" />
 
-      <div className="max-w-6xl mx-auto px-8 md:px-16 lg:px-24 py-32 md:py-40">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 md:px-16 lg:px-24 py-32 md:py-40">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: text */}
           <div>

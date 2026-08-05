@@ -31,7 +31,7 @@ export default function ResearchIndexPage() {
 
   return (
     <div className="bg-black min-h-screen">
-      <section className="relative pt-40 pb-20 px-6 md:px-10">
+      <section className="relative pt-40 pb-20 px-3 sm:px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -61,7 +61,7 @@ export default function ResearchIndexPage() {
       </section>
 
       <section ref={gridRef} className="py-16 md:py-24 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {divisions.map((d, i) => (
             <motion.div
               key={d.name}
@@ -82,6 +82,16 @@ export default function ResearchIndexPage() {
             </motion.div>
           ))}
         </div>
+      </section>
+
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
+        <p className="text-zinc-400 text-base mb-6">Working on something that overlaps with our research? Let&apos;s talk.</p>
+        <Link
+          href="/contact"
+          className="inline-flex items-center px-7 py-3 rounded-sm bg-white text-black text-xs font-semibold uppercase tracking-[0.1em] hover:bg-zinc-200 transition-colors duration-300"
+        >
+          Talk to the Research Team
+        </Link>
       </section>
     </div>
   );

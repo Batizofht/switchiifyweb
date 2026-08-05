@@ -32,7 +32,7 @@ export default function ServicesPage() {
   return (
     <div className="bg-black min-h-screen">
       {/* Hero */}
-      <section className="relative pt-40 pb-20 px-6 md:px-10">
+      <section className="relative pt-40 pb-20 px-3 sm:px-6 md:px-10">
         <div className="max-w-[1400px] mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -62,7 +62,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section ref={gridRef} className="py-16 px-6 md:px-10 border-t border-zinc-900">
+      <section ref={gridRef} className="py-16 px-3 sm:px-6 md:px-10 border-t border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((s, i) => (
@@ -94,7 +94,7 @@ export default function ServicesPage() {
 
       {/* Why Switchiify */}
       <section ref={statsRef} className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <motion.p
@@ -140,7 +140,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 border-t border-zinc-900 text-center px-6">
+      <section className="py-20 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Ready to work with us?</p>
         <Link
           href="/contact"

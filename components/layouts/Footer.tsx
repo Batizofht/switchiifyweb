@@ -7,7 +7,7 @@ import { footerData } from './footerData';
 export function Footer() {
   return (
     <footer className="bg-zinc-50 dark:bg-black border-t border-zinc-200 dark:border-white/5">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-10 pt-16 pb-10">
+      <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 pt-16 pb-10">
         {/* Top: logo + columns */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-7 gap-8 mb-14">
           {footerData.map((section) => (

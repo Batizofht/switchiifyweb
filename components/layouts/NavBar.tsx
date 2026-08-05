@@ -98,7 +98,7 @@ export function NavBar() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between h-14 gap-3">
+      <nav className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 flex items-center justify-between h-14 gap-3">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5 shrink-0">
           <Image
@@ -247,7 +247,7 @@ export function NavBar() {
             transition={{ duration: 0.15 }}
             className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/5 h-[calc(100dvh-3.5rem)] overflow-y-auto"
           >
-            <div className="px-6 py-6">
+            <div className="px-4 py-6">
               <AnimatePresence mode="wait" initial={false}>
                 {mobileView === 'root' ? (
                   <motion.div

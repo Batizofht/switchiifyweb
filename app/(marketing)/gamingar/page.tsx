@@ -101,7 +101,7 @@ export default function GamingarPage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 pb-16 md:pb-24 w-full">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 pb-16 md:pb-24 w-full">
 
           {/* Eyebrow */}
           <motion.p
@@ -118,8 +118,8 @@ export default function GamingarPage() {
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.08 }}
-            className="font-black text-white leading-[0.9] tracking-[-0.04em] mb-8 select-none"
-            style={{ fontSize: 'clamp(4rem, 15vw, 18rem)' }}
+            className="font-black text-white leading-[0.9] tracking-[-0.04em] mb-8 select-none break-words"
+            style={{ fontSize: 'clamp(2.5rem, 14vw, 11rem)' }}
           >
             GAMINGAR
           </motion.h1>
@@ -171,7 +171,7 @@ export default function GamingarPage() {
 
       {/* ─── 2. WHAT IS GAMINGAR ─────────────────────────────────────────────── */}
       <section id="trailer" className="py-24 md:py-32" ref={whatRef}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
             {/* Left: copy */}
@@ -243,7 +243,7 @@ export default function GamingarPage() {
 
       {/* ─── 3. FEATURE GRID ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 border-t border-zinc-900" ref={featRef}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <motion.div
             initial={reveal.initial}
@@ -300,7 +300,7 @@ export default function GamingarPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <motion.div
             initial={reveal.initial}
             animate={ctaInView ? reveal.animate : {}}

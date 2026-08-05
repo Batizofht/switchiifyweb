@@ -34,7 +34,7 @@ export default function CareersPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 pt-40">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 pt-40">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function CareersPage() {
 
       {/* Values */}
       <section className="py-24 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-1 md:grid-cols-3 gap-4">
           {values.map((v) => (
             <div key={v.title} className="p-6 rounded-md bg-white/[0.03] border border-white/10">
               <h3 className="text-white font-semibold text-base mb-2">{v.title}</h3>
@@ -76,7 +76,7 @@ export default function CareersPage() {
 
       {/* Open roles */}
       <section ref={rolesRef} className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             animate={rolesInView ? { opacity: 1, y: 0 } : {}}
@@ -106,7 +106,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-zinc-900 text-center px-6">
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Don&apos;t see a role that fits? We&apos;d still like to hear from you.</p>
         <Link
           href="/contact"

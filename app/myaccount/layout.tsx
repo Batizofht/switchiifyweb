@@ -87,7 +87,7 @@ export default function AccountLayout({ children }: { children: React.ReactNode 
 
       {/* Main content */}
       <div className="flex-1 overflow-auto">
-        <div className="max-w-4xl mx-auto px-6 py-10">
+        <div className="max-w-4xl mx-auto px-3 sm:px-6 py-10">
           {children}
         </div>
       </div>

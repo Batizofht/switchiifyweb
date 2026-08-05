@@ -45,7 +45,7 @@ export default function RoboticsResearchPage() {
             backgroundSize: '48px 48px',
           }}
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 pt-40">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 pt-40">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -75,7 +75,7 @@ export default function RoboticsResearchPage() {
 
       {/* Stats bar */}
       <section className="border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-3 divide-x divide-zinc-900">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-3 divide-x divide-zinc-900">
           {stats.map((s) => (
             <div key={s.label} className="py-8 text-center">
               <p className="text-3xl md:text-4xl font-bold text-white mb-1">{s.value}</p>
@@ -87,7 +87,7 @@ export default function RoboticsResearchPage() {
 
       {/* Programs grid */}
       <section ref={programsRef} className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={programsInView ? { opacity: 1, y: 0 } : {}}
@@ -121,7 +121,7 @@ export default function RoboticsResearchPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 border-t border-zinc-900 text-center px-6">
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Explore the rest of our research divisions.</p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link

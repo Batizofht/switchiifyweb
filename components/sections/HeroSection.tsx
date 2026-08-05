@@ -50,7 +50,7 @@ export function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black to-transparent" />
 
       {/* Main content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-20 pt-28">
+      <div className="relative z-10 flex-1 flex flex-col justify-center px-4 sm:px-8 md:px-16 lg:px-20 pt-28">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

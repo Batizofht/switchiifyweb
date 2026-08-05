@@ -34,7 +34,7 @@ export function ServiceDetailTemplate({
   return (
     <div className="bg-black min-h-screen">
       {/* Hero */}
-      <section className="relative pt-40 pb-20 px-6 md:px-10 border-b border-zinc-900">
+      <section className="relative pt-40 pb-20 px-3 sm:px-6 md:px-10 border-b border-zinc-900">
         <div className="max-w-[1400px] mx-auto">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -85,7 +85,7 @@ export function ServiceDetailTemplate({
 
       {/* Stats */}
       <section className="border-b border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 grid grid-cols-3 divide-x divide-zinc-900">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 grid grid-cols-3 divide-x divide-zinc-900">
           {stats.map((s) => (
             <div key={s.label} className="py-8 text-center">
               <p className="text-3xl md:text-4xl font-bold text-white mb-1">{s.value}</p>
@@ -97,7 +97,7 @@ export function ServiceDetailTemplate({
 
       {/* Features */}
       <section ref={featuresRef} className="py-24 md:py-32">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             animate={featuresInView ? { opacity: 1, y: 0 } : {}}
@@ -123,7 +123,7 @@ export function ServiceDetailTemplate({
       </section>
 
       {/* CTA */}
-      <section className="py-24 border-t border-zinc-900 text-center px-6">
+      <section className="py-24 border-t border-zinc-900 text-center px-3 sm:px-6">
         <p className="text-zinc-400 text-base mb-6">Ready to work with us?</p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <Link

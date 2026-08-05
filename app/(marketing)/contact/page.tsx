@@ -149,7 +149,7 @@ export default function ContactPage() {
           }}
         />
 
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -186,7 +186,7 @@ export default function ContactPage() {
         ref={twoColRef}
         className="py-24 md:py-32 border-t border-zinc-900 dark:border-zinc-900"
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.15fr] gap-16 lg:gap-24 items-start">
 
             {/* ── Left: contact info ────────────────────────────────────── */}
@@ -433,7 +433,7 @@ export default function ContactPage() {
 
       {/* ── 3. FOOTER CTA ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-zinc-950 dark:bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             <Reveal>

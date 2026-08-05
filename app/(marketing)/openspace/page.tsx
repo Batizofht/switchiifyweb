@@ -144,7 +144,7 @@ export default function OpenSpacePage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 pb-16 md:pb-24 w-full">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 pb-16 md:pb-24 w-full">
 
           {/* Eyebrow */}
           <motion.p
@@ -162,8 +162,8 @@ export default function OpenSpacePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
-              className="font-bold text-white leading-[1.0] tracking-tight select-none"
-              style={{ fontSize: 'clamp(3.5rem, 12vw, 10rem)' }}
+              className="font-bold text-white leading-[1.0] tracking-tight select-none break-words"
+              style={{ fontSize: 'clamp(2.75rem, 11vw, 9rem)' }}
             >
               Open
               <span
@@ -228,7 +228,7 @@ export default function OpenSpacePage() {
 
       {/* ─── 2. WHAT IS OPENSPACE ─────────────────────────────────────────────── */}
       <section className="py-24 md:py-32" ref={whatRef.ref}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <motion.div
             initial={reveal.initial}
@@ -284,7 +284,7 @@ export default function OpenSpacePage() {
 
       {/* ─── 3. USE CASES GRID ───────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 border-t border-zinc-900 dark:border-zinc-900" ref={useCasesRef.ref}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <motion.div
             initial={reveal.initial}
@@ -355,7 +355,7 @@ export default function OpenSpacePage() {
 
       {/* ─── 4. FEATURES LIST ────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 border-t border-zinc-900 dark:border-zinc-900" ref={featuresRef.ref}>
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <motion.div
             initial={reveal.initial}
@@ -411,7 +411,7 @@ export default function OpenSpacePage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <motion.div
             initial={reveal.initial}
             animate={ctaRef.isInView ? reveal.animate : {}}

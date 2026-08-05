@@ -221,7 +221,7 @@ export default function NeuroAIPage() {
         />
 
         {/* Hero content */}
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 pb-20 md:pb-28 w-full">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 pb-20 md:pb-28 w-full">
 
           <motion.p
             initial={{ opacity: 0, y: 8 }}
@@ -289,7 +289,7 @@ export default function NeuroAIPage() {
 
       {/* ── 2. THE INTELLIGENCE ─────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
             {/* Left: statement copy */}
@@ -357,7 +357,7 @@ export default function NeuroAIPage() {
 
       {/* ── 3. KNOWLEDGE MANAGEMENT ─────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <Reveal>
             <div className="p-8 md:p-12 rounded-md bg-white/[0.03] border border-white/10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
@@ -414,7 +414,7 @@ export default function NeuroAIPage() {
 
       {/* ── 4. HOW IT WORKS ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
 
           <Reveal className="mb-16">
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-5">
@@ -486,7 +486,7 @@ export default function NeuroAIPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-6">
               Get Started

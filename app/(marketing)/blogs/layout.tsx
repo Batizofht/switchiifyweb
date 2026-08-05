@@ -22,7 +22,7 @@ export default function BlogLayout({ children }: { children: React.ReactNode }) 
     <div>
       {/* Blog sub-nav */}
       <div className="sticky top-14 z-40 bg-black/95 backdrop-blur-xl border-b border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="flex items-center gap-6 h-11 overflow-x-auto scrollbar-hide">
             <div className="border-l-2 border-white/40 pl-3 shrink-0">
               <span className="text-xs font-semibold text-white tracking-tight">Switchiify Blog</span>

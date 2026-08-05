@@ -57,7 +57,7 @@ export default function BlogsIndexPage() {
           aria-hidden="true"
         />
 
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 md:px-10 py-24 md:py-32">
+        <div className="relative z-10 max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 py-24 md:py-32">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function BlogsIndexPage() {
 
       {/* ── 2. FEATURED POST ────────────────────────────────────────────────── */}
       <section className="py-16 bg-black dark:bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <Reveal className="mb-8">
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500">
               Featured
@@ -172,7 +172,7 @@ export default function BlogsIndexPage() {
 
       {/* ── 3. CATEGORY FILTER ──────────────────────────────────────────────── */}
       <section className="bg-black dark:bg-black border-b border-zinc-800 sticky top-0 z-20 backdrop-blur-sm bg-black/80">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="overflow-x-auto scrollbar-hide">
             <div className="flex items-center gap-2 py-4 min-w-max">
               {CATEGORIES.map((cat) => {
@@ -199,7 +199,7 @@ export default function BlogsIndexPage() {
 
       {/* ── 4. POSTS GRID ───────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-black dark:bg-black">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           {filtered.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {filtered.map((post, i) => (
@@ -236,7 +236,7 @@ export default function BlogsIndexPage() {
 
       {/* ── 5. BOTTOM CTA ───────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32 bg-zinc-950 dark:bg-zinc-950">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <Reveal>
             <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-5">
               Go Deeper

@@ -39,7 +39,7 @@ export function NeuroAISection() {
       {/* Content over sticky bg */}
       <div className="-mt-screen relative z-10">
         {/* First viewport: title */}
-        <div className="h-dvh flex flex-col justify-end px-8 md:px-16 lg:px-24 pb-20">
+        <div className="h-dvh flex flex-col justify-end px-4 sm:px-8 md:px-16 lg:px-24 pb-20">
           <p className="text-xs uppercase tracking-[0.25em] text-cyan-400 mb-4 font-medium">
             Switchiify Intelligence
           </p>
@@ -54,7 +54,7 @@ export function NeuroAISection() {
         {/* Second viewport: content over black */}
         <div
           ref={contentRef}
-          className="min-h-screen bg-black px-8 md:px-16 lg:px-24 pt-24 pb-32"
+          className="min-h-screen bg-black px-4 sm:px-8 md:px-16 lg:px-24 pt-24 pb-32"
         >
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">

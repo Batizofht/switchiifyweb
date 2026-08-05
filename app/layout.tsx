@@ -1,10 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import { NavBar } from "@/components/layouts/NavBar";
 import { Footer } from "@/components/layouts/Footer";
-import { FixedThemeToggle } from "@/components/theme/FixedThemeToggle";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,10 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
-  ],
+  themeColor: "#0a0a0a",
 };
 
 export const metadata: Metadata = {
@@ -101,7 +96,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
@@ -109,14 +104,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <ThemeProvider>
-          <NavBar />
-          <main className="min-h-screen bg-black dark:bg-black">
-            {children}
-          </main>
-          <Footer />
-          <FixedThemeToggle />
-        </ThemeProvider>
+        <NavBar />
+        <main className="min-h-screen bg-black">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

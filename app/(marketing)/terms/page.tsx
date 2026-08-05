@@ -9,7 +9,7 @@ export const metadata: Metadata = buildPageMetadata({
 
 export default function TermsPage() {
   return (
-    <div className="bg-black min-h-screen pt-40 pb-24 px-6 md:px-10">
+    <div className="bg-black min-h-screen pt-40 pb-24 px-3 sm:px-6 md:px-10">
       <div className="max-w-3xl mx-auto">
         <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-5">Legal</p>
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">Terms &amp; Conditions</h1>

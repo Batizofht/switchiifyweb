@@ -43,7 +43,7 @@ export default function LeadershipPage() {
             backgroundSize: '32px 32px',
           }}
         />
-        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-6 md:px-10 pb-20 pt-40">
+        <div className="relative z-10 max-w-[1400px] mx-auto w-full px-3 sm:px-6 md:px-10 pb-20 pt-40">
           <motion.p
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
@@ -73,7 +73,7 @@ export default function LeadershipPage() {
 
       {/* Team Grid */}
       <section ref={gridRef} className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {team.map((member, i) => (
               <motion.div
@@ -118,7 +118,7 @@ export default function LeadershipPage() {
 
       {/* Quote */}
       <section className="py-24 md:py-32 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-zinc-500 mb-8">Our Belief</p>
           <blockquote className="text-3xl md:text-5xl font-light text-white leading-[1.2] max-w-3xl mx-auto italic mb-6">
             &ldquo;Technology should be as human as the people who use it.&rdquo;
@@ -129,7 +129,7 @@ export default function LeadershipPage() {
 
       {/* CTA */}
       <section className="py-24 border-t border-zinc-900">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-3 sm:px-6 md:px-10 text-center">
           <p className="text-zinc-400 text-base mb-6">
             We&apos;re always looking for exceptional people.
           </p>
