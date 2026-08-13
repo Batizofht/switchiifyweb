@@ -14,7 +14,7 @@ const navItems = [
   { label: 'Company', hasDropdown: true },
   { label: 'Gamingar', href: '/gamingar' },
   { label: 'OpenSpace', href: '/openspace' },
-  { label: 'Stockify', href: 'https://stockify.rw', external: true },
+  { label: 'Spandbox', href: 'https://spandbox.com', external: true },
   { label: 'Neuro AI', href: '/neuroai' },
 ];
 
@@ -195,7 +195,7 @@ export function NavBar() {
                     Sign in
                   </Button>
                 </Link>
-                <a href="https://app.stockify.rw/register" target="_blank" rel="noopener noreferrer" className="hidden md:block">
+                <a href="https://app.spandbox.com/register" target="_blank" rel="noopener noreferrer" className="hidden md:block">
                   <Button variant="primary" size="sm">
                     Join OpenSpace
                   </Button>
@@ -322,7 +322,7 @@ export function NavBar() {
                       <Link href="/signin" onClick={closeMobileMenu}>
                         <Button variant="outline" size="md" className="w-full">Sign in</Button>
                       </Link>
-                      <a href="https://app.stockify.rw/register" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
+                      <a href="https://app.spandbox.com/register" target="_blank" rel="noopener noreferrer" onClick={closeMobileMenu}>
                         <Button variant="primary" size="md" className="w-full">Join OpenSpace</Button>
                       </a>
                     </div>

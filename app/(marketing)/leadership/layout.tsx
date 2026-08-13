@@ -3,7 +3,7 @@ import { buildPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Leadership',
-  description: 'Meet the team behind Switchiify — the leaders guiding Gamingar, Neuro AI, OpenSpace, and Stockify.',
+  description: 'Meet the team behind Switchiify — the leaders guiding Gamingar, Neuro AI, OpenSpace, and Spandbox.',
   path: '/leadership',
 });
 

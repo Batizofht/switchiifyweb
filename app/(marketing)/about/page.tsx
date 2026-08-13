@@ -227,7 +227,7 @@ A global technology company, headquartered in Kigali.
               </Reveal>
               <Reveal delay={0.2}>
                 <p className="text-zinc-400 text-base leading-relaxed mb-5">
-                  Switchiify is led by Chairman Mushinzimana Jean Baptiste and Managing Director Jean de Dieu Hatangimana, alongside the team building Stockify, our dedicated commerce platform, led by Musoni Jules.
+                  Switchiify is led by Chairman Mushinzimana Jean Baptiste and Managing Director Jean de Dieu Hatangimana, alongside the team building Spandbox, our dedicated commerce platform, led by Musoni Jules.
                 </p>
               </Reveal>
               <Reveal delay={0.3}>

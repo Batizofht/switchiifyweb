@@ -20,10 +20,10 @@ const team = [
   },
   {
     name: 'Musoni Jules',
-    title: 'Head of Stockify',
-    bio: 'Leads Stockify, Switchiify\'s dedicated platform.',
+    title: 'Head of Spandbox',
+    bio: 'Leads Spandbox, Switchiify\'s dedicated platform.',
     photo: '',
-    externalHref: 'https://stockify.rw',
+    externalHref: 'https://spandbox.com',
   },
 ];
 
@@ -99,7 +99,7 @@ export default function LeadershipPage() {
                       href={member.externalHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`${member.name} on Stockify`}
+                      aria-label={`${member.name} on Spandbox`}
                       className="text-zinc-500 hover:text-white transition-colors"
                     >
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

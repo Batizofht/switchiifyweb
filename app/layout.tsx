@@ -82,7 +82,7 @@ const organizationJsonLd = {
   logo: "https://www.switchiify.com/icon.png",
   description:
     "Switchiify Platforms Inc. is a technology corporation that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
-  sameAs: ["https://stockify.rw"],
+  sameAs: ["https://spandbox.com"],
   potentialAction: {
     "@type": "SearchAction",
     target: "https://www.switchiify.com/search?q={search_term_string}",

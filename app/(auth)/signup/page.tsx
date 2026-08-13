@@ -52,26 +52,26 @@ export default function SignUpPage() {
 
           {attempted && (
             <div className="mb-5 p-4 rounded-md border border-white/15 bg-white/[0.03]">
-              <p className="text-white text-sm font-medium mb-1">Account registration is managed through Stockify</p>
+              <p className="text-white text-sm font-medium mb-1">Account registration is managed through Spandbox</p>
               <p className="text-zinc-400 text-xs leading-relaxed mb-3">
                 Continue to{' '}
                 <a
-                  href="https://app.stockify.rw"
+                  href="https://app.spandbox.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white underline hover:text-zinc-300 transition-colors"
                 >
-                  app.stockify.rw
+                  app.spandbox.com
                 </a>{' '}
                 to create your account.
               </p>
               <a
-                href="https://app.stockify.rw"
+                href="https://app.spandbox.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-5 py-2 rounded-sm border border-white/25 text-white text-[11px] font-semibold uppercase tracking-[0.1em] hover:border-white/60 hover:bg-white/5 transition-all duration-300"
               >
-                Try Stockify
+                Try Spandbox
               </a>
             </div>
           )}
